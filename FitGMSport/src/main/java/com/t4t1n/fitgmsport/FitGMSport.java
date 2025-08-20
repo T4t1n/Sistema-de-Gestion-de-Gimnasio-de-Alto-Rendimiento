@@ -1,12 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- */
 
 package com.t4t1n.fitgmsport;
 
 /**
  *
- * @author cmjyt
+ * @author Jaimisky
  */
 public class FitGMSport {
 
