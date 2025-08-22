@@ -1,0 +1,117 @@
+
+package com.t4t1n.fitgmsport.modulos;
+
+import com.t4t1n.fitgmsport.recursos.Categoria;
+import com.t4t1n.fitgmsport.recursos.Entrenamiento;
+import com.t4t1n.fitgmsport.recursos.Validaciones;
+import java.text.DecimalFormat;
+import java.text.NumberFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+/**
+ *
+ * @author Jaimisky
+ */
+
+
+public class Atleta {
+    
+    private LocalDate fechaRegistro = LocalDate.now();
+    private String nombreAtleta;
+    private String identificacion;
+    private int edad;
+   // NumberFormat formatter = new DecimalFormat("#0");
+    private int estatura;
+    private Categoria categoria;
+    private Entrenamiento entrenamiento;
+    
+    
+    public Atleta() {
+        
+    }
+    public Atleta(String nombre, String identificacion, int edad, int estatura, Categoria categoria, Entrenamiento entrenamiento ){
+        if (Validaciones.validarString(1, nombre)){
+            System.out.println("se realizo exitosamente!");
+            this.nombreAtleta = nombre;
+        }else {
+            System.out.println("Nombre no registrado correctamente.");
+        }
+        
+        if (Validaciones.validarString(2, identificacion)){
+            System.out.println("Se realizo exitosamente");
+            this.identificacion = identificacion;
+        }else {
+            System.out.println("Nombre no registrado correctamente.");
+        }
+        
+        if (Validaciones.validarInt(1, edad)){
+            System.out.println("Se realizo exitosamente!");
+            this.edad = edad;
+        } else {
+            System.out.println("Edad no registrada correctamente");
+        }
+        if (estatura > 0){
+            System.out.println("Se realizo exitosamente!");
+            this.estatura = estatura;
+        }else {
+            System.out.println("Estatura no registrado correctamente");
+        }
+        this.categoria = categoria;
+        this.entrenamiento = entrenamiento;
+                
+    }
+    
+    
+    
+    public String getFechaRegistro(){
+        DateTimeFormatter myFormatWish = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        String formattedDate = myFormatWish.format(fechaRegistro);
+        return formattedDate;
+    }
+    
+    public String getNombreAtleta(){
+        if(nombreAtleta == null) {
+        return "No hay nombre registrado";
+        }
+        return nombreAtleta;
+    }
+    
+    public String getIdetificacion(){
+        if(identificacion == null) {
+            return "No hay identificacion registrada";
+        }
+        return identificacion;
+    }
+    
+    public int getEdad(){
+//        if(edad = null){
+//            System.out.println("No hay edad registrada");
+//            return 0;
+//        }
+        return edad;
+    }
+    
+    public int getEstaura() {
+        return estatura;
+    }
+
+    
+    
+
+    @Override
+    public String toString() {
+        return  "Fecha de registro: " + fechaRegistro + '\n' +
+                "Nombre del atleta: " + nombreAtleta + '\n' +
+                "Identificación: " + identificacion + '\n' + 
+                "Edad: " + edad + " años" + '\n' +
+                "Estatura: " + estatura + " cm" + '\n' +
+                "Categoria: " + categoria.getTipo() + '\n' +
+                "Entrenamiento: " + entrenamiento.getTipoEntrenamiento();
+    }
+
+
+   
+    
+    
+}
