@@ -11,4 +11,12 @@
         <maven.compiler.target>23</maven.compiler.target>
         <exec.mainClass>com.t4t1n.fitgmsport.FitGMSport</exec.mainClass>
     </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.18.0</version>
+        </dependency>
+        
+    </dependencies>
 </project>

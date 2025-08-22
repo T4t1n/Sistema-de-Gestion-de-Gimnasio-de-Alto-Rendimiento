@@ -2,6 +2,7 @@
 package com.t4t1n.fitgmsport.modulos;
 
 import com.t4t1n.fitgmsport.recursos.Categoria;
+import com.t4t1n.fitgmsport.recursos.Entrenamiento;
 import com.t4t1n.fitgmsport.recursos.Validaciones;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -23,12 +24,13 @@ public class Atleta {
    // NumberFormat formatter = new DecimalFormat("#0");
     private int estatura;
     private Categoria categoria;
+    private Entrenamiento entrenamiento;
     
     
     public Atleta() {
         
     }
-    public Atleta(String nombre, String identificacion, int edad, int estatura, Categoria categoria ){
+    public Atleta(String nombre, String identificacion, int edad, int estatura, Categoria categoria, Entrenamiento entrenamiento ){
         if (Validaciones.validarString(1, nombre)){
             System.out.println("se realizo exitosamente!");
             this.nombreAtleta = nombre;
@@ -56,10 +58,8 @@ public class Atleta {
             System.out.println("Estatura no registrado correctamente");
         }
         this.categoria = categoria;
-        
+        this.entrenamiento = entrenamiento;
                 
-                
-        
     }
     
     
@@ -106,7 +106,8 @@ public class Atleta {
                 "Identificación: " + identificacion + '\n' + 
                 "Edad: " + edad + " años" + '\n' +
                 "Estatura: " + estatura + " cm" + '\n' +
-                "Categoria: " + categoria.getTipo();
+                "Categoria: " + categoria.getTipo() + '\n' +
+                "Entrenamiento: " + entrenamiento.getTipoEntrenamiento();
     }
 
 
