@@ -1,6 +1,7 @@
 
 package com.t4t1n.fitgmsport.modulos;
 
+import com.t4t1n.fitgmsport.recursos.Categoria;
 import com.t4t1n.fitgmsport.recursos.Validaciones;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -18,17 +19,16 @@ public class Atleta {
     private LocalDate fechaRegistro = LocalDate.now();
     private String nombreAtleta;
     private String identificacion;
-    private double edad;
-    NumberFormat formatter = new DecimalFormat("#0");
-    private double estatura;
-    
-    
+    private int edad;
+   // NumberFormat formatter = new DecimalFormat("#0");
+    private int estatura;
+    private Categoria categoria;
     
     
     public Atleta() {
         
     }
-    public Atleta(String nombre, String identificacion, int edad, int estatura ){
+    public Atleta(String nombre, String identificacion, int edad, int estatura, Categoria categoria ){
         if (Validaciones.validarString(1, nombre)){
             System.out.println("se realizo exitosamente!");
             this.nombreAtleta = nombre;
@@ -49,6 +49,16 @@ public class Atleta {
         } else {
             System.out.println("Edad no registrada correctamente");
         }
+        if (estatura > 0){
+            System.out.println("Se realizo exitosamente!");
+            this.estatura = estatura;
+        }else {
+            System.out.println("Estatura no registrado correctamente");
+        }
+        this.categoria = categoria;
+        
+                
+                
         
     }
     
@@ -74,12 +84,33 @@ public class Atleta {
         return identificacion;
     }
     
-    public String getEdad(){
+    public int getEdad(){
 //        if(edad = null){
 //            System.out.println("No hay edad registrada");
 //            return 0;
 //        }
-        return formatter.format(edad);
+        return edad;
     }
+    
+    public int getEstaura() {
+        return estatura;
+    }
+
+    
+    
+
+    @Override
+    public String toString() {
+        return  "Fecha de registro: " + fechaRegistro + '\n' +
+                "Nombre del atleta: " + nombreAtleta + '\n' +
+                "Identificación: " + identificacion + '\n' + 
+                "Edad: " + edad + " años" + '\n' +
+                "Estatura: " + estatura + " cm" + '\n' +
+                "Categoria: " + categoria.getTipo();
+    }
+
+
+   
+    
     
 }
