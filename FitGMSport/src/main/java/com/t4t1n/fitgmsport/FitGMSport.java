@@ -1,10 +1,8 @@
 
 package com.t4t1n.fitgmsport;
 
-import com.t4t1n.fitgmsport.modulos.Atleta;
 import com.t4t1n.fitgmsport.principal.Principal;
-import com.t4t1n.fitgmsport.recursos.Categoria;
-import com.t4t1n.fitgmsport.recursos.Entrenamiento;
+
 
 
 /**
