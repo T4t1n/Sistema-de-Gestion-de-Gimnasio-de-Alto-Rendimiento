@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.t4t1n.fitgmsport;
+import com.t4t1n.fitgmsport.modulos.Entrenamiento;
 import org.apache.commons.lang3.StringUtils;
 
 /**
@@ -15,6 +16,15 @@ public class test {
         String input = "Trabajo físico intensivo";
         String withoutAccent = StringUtils.stripAccents(input.toUpperCase().replaceAll("\\s", ""));
         System.out.println(withoutAccent);
+        
+        
+        Entrenamiento ent = new Entrenamiento();
+        Entrenamiento ent1 = new Entrenamiento();
+        Entrenamiento ent2 = new Entrenamiento();
+        
+        System.out.println(ent);
+        System.out.println(ent1);
+        System.out.println(ent2);
         
     }
     
