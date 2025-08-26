@@ -2,7 +2,7 @@
 package com.t4t1n.fitgmsport.modulos;
 
 import com.t4t1n.fitgmsport.recursos.Categoria;
-import com.t4t1n.fitgmsport.recursos.Entrenamiento;
+import com.t4t1n.fitgmsport.recursos.DescripcionEntrenamiento;
 
 /**
  *
@@ -15,7 +15,7 @@ public class Profesional extends Atleta{
     
     public Profesional(){};
     
-    public Profesional(String nombre, String identificacion, int edad, int estatura, Categoria categoria, Entrenamiento entrenamiento, double peso, int porcentajeDeGrasa) {
+    public Profesional(String nombre, String identificacion, int edad, int estatura, Categoria categoria, DescripcionEntrenamiento entrenamiento, double peso, int porcentajeDeGrasa) {
         super(nombre, identificacion, edad, estatura, categoria, entrenamiento);
         if (peso < 0) {
             System.out.println("Error");

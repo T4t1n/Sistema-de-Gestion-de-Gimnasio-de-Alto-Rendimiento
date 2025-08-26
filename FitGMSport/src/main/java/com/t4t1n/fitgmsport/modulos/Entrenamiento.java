@@ -1,6 +1,8 @@
 
 package com.t4t1n.fitgmsport.modulos;
 
+import com.t4t1n.fitgmsport.recursos.Categoria;
+import com.t4t1n.fitgmsport.recursos.DescripcionEntrenamiento;
 import java.util.Random;
 
 /**
@@ -8,33 +10,27 @@ import java.util.Random;
  * @author Jaimisky
  */
 public class Entrenamiento {
-    private String codeStart = "GYM";
-    private String codeEnd = "0000";
-    private String codeEnd = createCode(codeEnd);
+    private  String codeStart = "GYM";
+    private  Random r = new Random();
+    private  String codeEnd = String.format("%04d", r.nextInt(1000));
+    private  String code = codeStart + codeEnd;
+    private  String entrenamiento;
+    private Categoria categoriaEntrenamiento;
     
-
-    public String getCodeStart() {
-        return codeStart;
+    public Entrenamiento(String entrenamiento, Categoria categoriaEn) {
+        this.entrenamiento = entrenamiento;
+        this.categoriaEntrenamiento = categoriaEn;
+        
     }
 
-    public void setCodeStart(String codeStart) {
-        this.codeStart = codeStart;
+    public String getCode() {
+        return code;
     }
-
-
 
     @Override
     public String toString() {
-        return "Entrenamiento{" + "codeStart=" + codeStart + ", codeEnd=" + codeEnd + '}';
+        return "Entrenamiento{" + "code=" + code + ", entrenamiento=" + entrenamiento + ", categoriaEntrenamiento=" + categoriaEntrenamiento + '}';
     }
-    
-    public String createCode(String codeEnd){
-      Integer i = Integer.parseInt(s);
-      i++;
-      s = String.format("%0" + s.length() + "d", i);
-      return s;
-      }
-    }
-    
+
     
 }

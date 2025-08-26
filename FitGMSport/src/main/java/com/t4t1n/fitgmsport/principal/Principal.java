@@ -6,7 +6,7 @@ import com.t4t1n.fitgmsport.modulos.Competitivo;
 import com.t4t1n.fitgmsport.modulos.Profesional;
 import com.t4t1n.fitgmsport.modulos.Recreativo;
 import com.t4t1n.fitgmsport.recursos.Categoria;
-import com.t4t1n.fitgmsport.recursos.Entrenamiento;
+import com.t4t1n.fitgmsport.recursos.DescripcionEntrenamiento;
 import com.t4t1n.fitgmsport.recursos.Objetivo;
 import java.util.Scanner;
 
@@ -55,8 +55,8 @@ public class Principal {
         
         try{
         Categoria tipo = Categoria.valueOf(entrada1);
-        String tipoEn = Entrenamiento.valueOfOrDefault(entrenamiento);
-        Entrenamiento tipoEnv2 = Entrenamiento.valueOf(tipoEn);
+        String tipoEn = DescripcionEntrenamiento.valueOfOrDefault(entrenamiento);
+        DescripcionEntrenamiento tipoEnv2 = DescripcionEntrenamiento.valueOf(tipoEn);
         
         
 
