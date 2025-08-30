@@ -104,14 +104,14 @@ public class test {
 //            String contenido1 = Files.readString(rutaHola);
 //            System.out.println(contenido1);
 //            contador++;
-//        }
-        
+//        }       
         String seguir;
         String descEntrenamiento;
         String categoriaEntre;
-        List<Entrenamiento> listaEntrenamientos;
+        List<Entrenamiento> listaEntrenamientos = new ArrayList();
         List<String> listaEntrenamientosTexto = new ArrayList();
-        File fileEntrenamientos = new File("Entrenamientos.txt");
+        Path rutaEntrenamientos = Paths.get("Entrenamientos.txt");
+        
         do {
             System.out.println("Escribe la descripcion de el entrenamiento: ");
             descEntrenamiento = sc.nextLine();
@@ -119,21 +119,14 @@ public class test {
             categoriaEntre = sc.nextLine();
             Categoria ce = Categoria.valueOf(categoriaEntre.toUpperCase());
             Entrenamiento enGlobal = new Entrenamiento(descEntrenamiento, ce);
-            listaEntrenamientos = List.of(enGlobal);
-            listaEntrenamientosTexto.add(listaEntrenamientos.toString());
-            Path rutaEntrenamientos = Paths.get("Entrenaminetos.txt");
-            Files.write(rutaEntrenamientos, listaEntrenamientosTexto);
-            System.out.println("Desesa seguir?");
-            seguir = sc.nextLine();
-            
-            
+            listaEntrenamientos.add(enGlobal);
+            listaEntrenamientosTexto.addLast(listaEntrenamientos.toString());
+            Files.write(rutaEntrenamientos,listaEntrenamientosTexto);
+            System.out.println("Desea seguir?");
+            seguir = sc.nextLine();       
         }while(seguir.equalsIgnoreCase("S"));
-        Path rutaEntrenamientos = Paths.get("Entrenaminetos.txt");
         String contenidoEn = Files.readString(rutaEntrenamientos);
         System.out.println(contenidoEn);
-        
+        System.out.println(listaEntrenamientos);
     }
-    
 }
-
-
