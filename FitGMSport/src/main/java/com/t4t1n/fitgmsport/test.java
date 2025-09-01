@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -127,18 +128,58 @@ public class test {
 //        String contenidoEn = Files.readString(rutaEntrenamientos);
 //        System.out.println(contenidoEn);
         
-        ArrayList<Entrenamiento> letras = new ArrayList();
+        List<Entrenamiento> letras = new ArrayList();
+        List<String> letras2 = new ArrayList();
         
         String tex = "Competitivo";                
         Categoria text = Categoria.valueOf(tex.toUpperCase());
         int contador = 0;
         
-        do {
-            contador++;
-        letras.add(new Entrenamiento("Trabajo", text));
-        letras.add(new Entrenamiento("Locura", text));
-        }while(contador == 5);
+//        while(contador.contains("Y")) {
+//            letras.add(new Entrenamiento("Trabajo", text));
+//            System.out.println("You need to go!");
+//           contador = sc.nextLine();
+//        }
+        Path rutaEntrenamientos = Paths.get("Entrenamientos.txt");
+        String ultimo;
         
-        System.out.println(letras);
+//        do {
+//            letras.add(new Entrenamiento("Trabajo", text));
+//            
+//            letras2.addLast(letras.toString());
+//            ultimo = letras2.getLast();
+//            Files.writeString(rutaEntrenamientos, ultimo);
+//            contador++;
+//        }while(contador != 5);
+        
+        
+        String entrenamiento;
+        String categoria;
+        String seguir = "Y";
+        List<Entrenamiento> en = new ArrayList<>();
+        List<String> entxt = new ArrayList<>();
+        String last;
+        File myObj = new File("Entrenamientos1.txt");
+        
+        
+        while(seguir.contains("Y")){
+            System.out.println("Entrenamiento: ");
+            entrenamiento = sc.nextLine();
+            System.out.println("Categoria: ");
+            categoria = sc.nextLine();
+            Categoria categoriaValidation = Categoria.valueOf(categoria.toUpperCase());
+            en.add(new Entrenamiento(entrenamiento, categoriaValidation));
+            entxt.add(en.toString());
+            last = entxt.getLast();
+            //FileWriter file = new FileWriter("Entrenamientos1.txt", true);
+            //file.append(last);
+            //file.close();
+            Path rutaEntrenamientos1 = Paths.get("Entrenamientos1.txt");
+            Files.writeString(rutaEntrenamientos1, last, StandardOpenOption.APPEND);
+            System.out.println("Need to insert more?");
+            seguir = sc.nextLine();
+        }
+        
+        
     }
 }

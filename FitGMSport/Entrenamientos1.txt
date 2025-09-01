@@ -1,0 +1,4 @@
+[
+Entrenamiento{code=GYM0251, entrenamiento=hey, categoriaEntrenamiento=COMPETITIVO}][
+Entrenamiento{code=GYM0328, entrenamiento=Hye w, categoriaEntrenamiento=RECREATIVO}][
+Entrenamiento{code=GYM0446, entrenamiento=Trabajo de locos por ellas, categoriaEntrenamiento=COMPETITIVO}]
