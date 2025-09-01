@@ -29,7 +29,7 @@ public class Entrenamiento {
 
     @Override
     public String toString() {
-        return "Entrenamiento{" + "code=" + code + ", entrenamiento=" + entrenamiento + ", categoriaEntrenamiento=" + categoriaEntrenamiento + '}';
+        return '\n' + "Entrenamiento{" + "code=" + code + ", entrenamiento=" + entrenamiento + ", categoriaEntrenamiento=" + categoriaEntrenamiento + '}';
     }
 
     

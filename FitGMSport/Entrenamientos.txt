@@ -1,2 +1,1 @@
-[Entrenamiento{code=GYM0645, entrenamiento=too much sauce, categoriaEntrenamiento=COMPETITIVO}]
-[Entrenamiento{code=GYM0645, entrenamiento=too much sauce, categoriaEntrenamiento=COMPETITIVO}, Entrenamiento{code=GYM0277, entrenamiento=loco, categoriaEntrenamiento=RECREATIVO}]
+[Entrenamiento{code=GYM0890, entrenamiento=tragar tierra como perro, categoriaEntrenamiento=PROFESIONAL}]

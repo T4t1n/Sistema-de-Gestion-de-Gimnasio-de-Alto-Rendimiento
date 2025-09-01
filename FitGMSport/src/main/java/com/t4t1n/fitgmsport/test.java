@@ -105,28 +105,40 @@ public class test {
 //            System.out.println(contenido1);
 //            contador++;
 //        }       
-        String seguir;
-        String descEntrenamiento;
-        String categoriaEntre;
-        List<Entrenamiento> listaEntrenamientos = new ArrayList();
-        List<String> listaEntrenamientosTexto = new ArrayList();
-        Path rutaEntrenamientos = Paths.get("Entrenamientos.txt");
+//        String seguir;
+//        String descEntrenamiento;
+//        String categoriaEntre;
+//        List<Entrenamiento> listaEntrenamientos = new ArrayList();
+//        List<String> listaEntrenamientosTexto = new ArrayList();
+//        Path rutaEntrenamientos = Paths.get("Entrenamientos.txt");
+//        
+//        do {
+//            System.out.println("Escribe la descripcion de el entrenamiento: ");
+//            descEntrenamiento = sc.nextLine();
+//            System.out.println("Escribe la categoria a la que pertenecera este entrenamiento");
+//            categoriaEntre = sc.nextLine();
+//            Categoria ce = Categoria.valueOf(categoriaEntre.toUpperCase());
+//            listaEntrenamientos.add(new Entrenamiento(descEntrenamiento, ce));
+//            listaEntrenamientosTexto.addLast(listaEntrenamientos.toString());
+//            Files.write(rutaEntrenamientos,listaEntrenamientosTexto);
+//            System.out.println("Desea seguir?");
+//            seguir = sc.nextLine();       
+//        }while(seguir.equalsIgnoreCase("S"));
+//        String contenidoEn = Files.readString(rutaEntrenamientos);
+//        System.out.println(contenidoEn);
+        
+        ArrayList<Entrenamiento> letras = new ArrayList();
+        
+        String tex = "Competitivo";                
+        Categoria text = Categoria.valueOf(tex.toUpperCase());
+        int contador = 0;
         
         do {
-            System.out.println("Escribe la descripcion de el entrenamiento: ");
-            descEntrenamiento = sc.nextLine();
-            System.out.println("Escribe la categoria a la que pertenecera este entrenamiento");
-            categoriaEntre = sc.nextLine();
-            Categoria ce = Categoria.valueOf(categoriaEntre.toUpperCase());
-            Entrenamiento enGlobal = new Entrenamiento(descEntrenamiento, ce);
-            listaEntrenamientos.add(enGlobal);
-            listaEntrenamientosTexto.addLast(listaEntrenamientos.toString());
-            Files.write(rutaEntrenamientos,listaEntrenamientosTexto);
-            System.out.println("Desea seguir?");
-            seguir = sc.nextLine();       
-        }while(seguir.equalsIgnoreCase("S"));
-        String contenidoEn = Files.readString(rutaEntrenamientos);
-        System.out.println(contenidoEn);
-        System.out.println(listaEntrenamientos);
+            contador++;
+        letras.add(new Entrenamiento("Trabajo", text));
+        letras.add(new Entrenamiento("Locura", text));
+        }while(contador == 5);
+        
+        System.out.println(letras);
     }
 }
