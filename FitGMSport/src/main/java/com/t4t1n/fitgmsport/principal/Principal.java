@@ -7,7 +7,12 @@ import com.t4t1n.fitgmsport.modulos.Profesional;
 import com.t4t1n.fitgmsport.modulos.Recreativo;
 import com.t4t1n.fitgmsport.recursos.Categoria;
 import com.t4t1n.fitgmsport.recursos.DescripcionEntrenamiento;
+import com.t4t1n.fitgmsport.recursos.GuardarEnArchivo;
 import com.t4t1n.fitgmsport.recursos.Objetivo;
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -16,6 +21,7 @@ import java.util.Scanner;
  */
 public class Principal {
     Scanner sc = new Scanner(System.in);
+    
     
     String nombre;
     String identificacion;
@@ -27,8 +33,11 @@ public class Principal {
     int porcentajeDeGrasa;
     
     Atleta at1;
+    List<Atleta> atleta = new ArrayList<>();
+    List<String> atletaTxt = new ArrayList<>(); 
+    String atletaTexto; 
     
-    public void ingresarDatos(){
+    public void ingresarDatos() throws IOException{
         System.out.println("Porfavor ingrese los datos: ");
         System.out.println("Ingrese su nombre: ");
         nombre = sc.nextLine();
@@ -50,7 +59,7 @@ public class Principal {
         
     }
     
-    public void creandoObjeto(String nombre, String identificacion, int edad, int estatura, String categoria, String entrenamiento, double peso, int porcentaje) {
+    public void creandoObjeto(String nombre, String identificacion, int edad, int estatura, String categoria, String entrenamiento, double peso, int porcentaje) throws IOException {
         String entrada1 = categoria.toUpperCase();
         
         try{
@@ -67,28 +76,31 @@ public class Principal {
                String objetivo = sc.nextLine();
                String tipoObj = Objetivo.valueOfOrDefault(objetivo);
                Objetivo obv2 = Objetivo.valueOf(tipoObj);
-               at1 = new Recreativo(nombre, identificacion, edad, estatura, tipo, tipoEnv2, obv2);
+               atleta.add( new Recreativo(nombre, identificacion, edad, estatura, tipo, tipoEnv2, obv2));
            } else if (tipo == Categoria.PROFESIONAL){
                System.out.println("Digite el peso en kilogramos: ");
                peso = sc.nextDouble();
                System.out.println("Digite el porcetaje de grasa del atleta: ");
                porcentajeDeGrasa = sc.nextInt();
-               at1 = new Profesional(nombre, identificacion, edad, estatura, tipo, tipoEnv2, peso, porcentajeDeGrasa);
+               atleta.add(new Profesional(nombre, identificacion, edad, estatura, tipo, tipoEnv2, peso, porcentajeDeGrasa));
            } else if (tipo == Categoria.COMPETITIVO) {
                System.out.println("Digite el peso en kilogramos: ");
                peso = sc.nextDouble();
                sc.nextLine();
                System.out.println("Digite el porcetaje de grasa del atleta: ");
                porcentajeDeGrasa = sc.nextInt();
-               at1 = new Competitivo(nombre, identificacion, edad, estatura, tipo, tipoEnv2, peso, porcentajeDeGrasa);
+               atleta.add(new Competitivo(nombre, identificacion, edad, estatura, tipo, tipoEnv2, peso, porcentajeDeGrasa));
            }
+           atletaTxt.add(atleta.toString());
+           atletaTexto = atletaTxt.getLast();
+           GuardarEnArchivo.atletas(atletaTexto);
         
         }catch(IllegalArgumentException e) {
             System.out.println("Error: valor de categoria o tipo de entrenamiento no valido.");
         }
         
         try {
-        System.out.println(at1.toString());
+        System.out.println(atleta.toString());
         }catch(NullPointerException e) {
             System.out.println("Como hay un error no se pudo imprimir.");
         }

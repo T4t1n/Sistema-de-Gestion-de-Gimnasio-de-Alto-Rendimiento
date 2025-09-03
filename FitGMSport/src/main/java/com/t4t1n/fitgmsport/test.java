@@ -5,6 +5,7 @@
 package com.t4t1n.fitgmsport;
 import com.t4t1n.fitgmsport.modulos.Entrenamiento;
 import com.t4t1n.fitgmsport.recursos.Categoria;
+import com.t4t1n.fitgmsport.recursos.GuardarEnArchivo;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -159,7 +160,6 @@ public class test {
         List<Entrenamiento> en = new ArrayList<>();
         List<String> entxt = new ArrayList<>();
         String last;
-        File myObj = new File("Entrenamientos1.txt");
         
         
         while(seguir.contains("Y")){
@@ -171,10 +171,9 @@ public class test {
             en.add(new Entrenamiento(entrenamiento, categoriaValidation));
             entxt.add(en.toString());
             last = entxt.getLast();
-            //FileWriter file = new FileWriter("Entrenamientos1.txt", true);
-            //file.append(last);
-            //file.close();
+            //GuardarEnArchivo.entrenamientos(last);
             Path rutaEntrenamientos1 = Paths.get("Entrenamientos1.txt");
+            Files.createFile(rutaEntrenamientos1);
             Files.writeString(rutaEntrenamientos1, last, StandardOpenOption.APPEND);
             System.out.println("Need to insert more?");
             seguir = sc.nextLine();

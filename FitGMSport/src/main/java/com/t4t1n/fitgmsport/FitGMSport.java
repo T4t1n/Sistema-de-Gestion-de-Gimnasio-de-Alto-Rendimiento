@@ -2,6 +2,7 @@
 package com.t4t1n.fitgmsport;
 
 import com.t4t1n.fitgmsport.principal.Principal;
+import java.io.IOException;
 
 
 
@@ -11,7 +12,7 @@ import com.t4t1n.fitgmsport.principal.Principal;
  */
 public class FitGMSport {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         
         Principal demo = new Principal();
         demo.ingresarDatos();
