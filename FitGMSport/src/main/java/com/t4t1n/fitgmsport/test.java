@@ -52,6 +52,41 @@ public class test {
         
         
         Scanner sc = new Scanner(System.in);
+        String texto;
+        
+        System.out.println("Ingrese palabra a buscar");
+        texto = sc.nextLine();
+        
+        Path  path = Path.of("Atletas.txt");
+        int pos = -1;
+        try {
+            List<String> lista = Files.readAllLines(path);
+            String cad = "";
+            for (int i = 0; i < lista.size(); i++) {
+                pos = lista.get(i).indexOf(texto);
+                if(pos != -1) {
+                    cad += "Se encontró la palabra en la linea " + 
+                            i +" posición " + pos + "\n";
+                    String im =  lista.get(i);
+                    System.out.println(im);
+                }
+                
+                
+            }
+            System.out.println(cad);
+        }catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 //        
 //        System.out.println("Escribe algo importante");
 //        String text = sc.nextLine();
@@ -129,56 +164,58 @@ public class test {
 //        String contenidoEn = Files.readString(rutaEntrenamientos);
 //        System.out.println(contenidoEn);
         
-        List<Entrenamiento> letras = new ArrayList();
-        List<String> letras2 = new ArrayList();
-        
-        String tex = "Competitivo";                
-        Categoria text = Categoria.valueOf(tex.toUpperCase());
-        int contador = 0;
-        
-//        while(contador.contains("Y")) {
-//            letras.add(new Entrenamiento("Trabajo", text));
-//            System.out.println("You need to go!");
-//           contador = sc.nextLine();
+//        List<Entrenamiento> letras = new ArrayList();
+//        List<String> letras2 = new ArrayList();
+//        
+//        String tex = "Competitivo";                
+//        Categoria text = Categoria.valueOf(tex.toUpperCase());
+//        int contador = 0;
+//        
+////        while(contador.contains("Y")) {
+////            letras.add(new Entrenamiento("Trabajo", text));
+////            System.out.println("You need to go!");
+////           contador = sc.nextLine();
+////        }
+//        Path rutaEntrenamientos = Paths.get("Entrenamientos.txt");
+//        String ultimo;
+//        
+////        do {
+////            letras.add(new Entrenamiento("Trabajo", text));
+////            
+////            letras2.addLast(letras.toString());
+////            ultimo = letras2.getLast();
+////            Files.writeString(rutaEntrenamientos, ultimo);
+////            contador++;
+////        }while(contador != 5);
+//        
+//        
+//        String entrenamiento;
+//        String categoria;
+//        String seguir = "Y";
+//        List<Entrenamiento> en = new ArrayList<>();
+//        List<String> entxt = new ArrayList<>();
+//        String last;
+//        
+//        
+//        while(seguir.contains("Y")){
+//            System.out.println("Entrenamiento: ");
+//            entrenamiento = sc.nextLine();
+//            System.out.println("Categoria: ");
+//            categoria = sc.nextLine();
+//            Categoria categoriaValidation = Categoria.valueOf(categoria.toUpperCase());
+//            en.add(new Entrenamiento(entrenamiento, categoriaValidation));
+//            entxt.add(en.toString());
+//            last = entxt.getLast();
+//            //GuardarEnArchivo.entrenamientos(last);
+//            Path rutaEntrenamientos1 = Paths.get("Entrenamientos1.txt");
+//            Files.createFile(rutaEntrenamientos1);
+//            Files.writeString(rutaEntrenamientos1, last, StandardOpenOption.APPEND);
+//            System.out.println("Need to insert more?");
+//            seguir = sc.nextLine();
 //        }
-        Path rutaEntrenamientos = Paths.get("Entrenamientos.txt");
-        String ultimo;
         
-//        do {
-//            letras.add(new Entrenamiento("Trabajo", text));
-//            
-//            letras2.addLast(letras.toString());
-//            ultimo = letras2.getLast();
-//            Files.writeString(rutaEntrenamientos, ultimo);
-//            contador++;
-//        }while(contador != 5);
-        
-        
-        String entrenamiento;
-        String categoria;
-        String seguir = "Y";
-        List<Entrenamiento> en = new ArrayList<>();
-        List<String> entxt = new ArrayList<>();
-        String last;
-        
-        
-        while(seguir.contains("Y")){
-            System.out.println("Entrenamiento: ");
-            entrenamiento = sc.nextLine();
-            System.out.println("Categoria: ");
-            categoria = sc.nextLine();
-            Categoria categoriaValidation = Categoria.valueOf(categoria.toUpperCase());
-            en.add(new Entrenamiento(entrenamiento, categoriaValidation));
-            entxt.add(en.toString());
-            last = entxt.getLast();
-            //GuardarEnArchivo.entrenamientos(last);
-            Path rutaEntrenamientos1 = Paths.get("Entrenamientos1.txt");
-            Files.createFile(rutaEntrenamientos1);
-            Files.writeString(rutaEntrenamientos1, last, StandardOpenOption.APPEND);
-            System.out.println("Need to insert more?");
-            seguir = sc.nextLine();
-        }
-        
+
+
         
     }
 }

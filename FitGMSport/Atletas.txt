@@ -1,0 +1,24 @@
+[Fecha de registro: 2025-09-03
+Nombre del atleta: Cristiano Ronaldo
+Identificación: 777777777
+Edad: 40 años
+Estatura: 189 cm
+Categoria: Recreativo
+Entrenamiento: Trabajo físico intensivo
+Objetivo: Bajar de peso][Fecha de registro: 2025-09-03
+Nombre del atleta: Jaimisky Cellez
+Identificación: 702880337
+Edad: 23 años
+Estatura: 171 cm
+Categoria: Profesional
+Entrenamiento: Trabajo físico intensivo
+Peso:45.0
+Porcentaje de grasa: 45][Fecha de registro: 2025-09-03
+Nombre del atleta: Archaf Hakimi
+Identificación: 999999999
+Edad: 56 años
+Estatura: 188 cm
+Categoria: Competitivo
+Entrenamiento: Trabajo físico intensivo
+Peso:45.0
+Porcentaje de Grasa: 45]
