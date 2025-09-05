@@ -20,7 +20,7 @@ public class GuardarEnArchivo {
     public static void entrenamientos(String entrenamiento) throws IOException {
         File Archivo = new File("Entrenamientos.txt");
         try (FileWriter file = new FileWriter("Entrenamientos.txt", true)) {
-            file.append(entrenamiento);
+            file.append(entrenamiento.replaceAll("[\\[\\]]+", ""));
             System.out.println("Se realizo exitosamente el registro del entrenamiento");
         }
     }
@@ -32,8 +32,10 @@ public class GuardarEnArchivo {
         Path rutaAtletaArchivo = Paths.get("Atletas.txt");
         if(Files.exists(rutaAtletaArchivo) == false) {
         Files.createFile(rutaAtletaArchivo);
+        Files.writeString(rutaAtletaArchivo, atleta.replaceAll("[\\[\\]]+", ""), StandardOpenOption.APPEND);
+        System.out.println("Se realizo exitosamente el registro del atleta");
         } else {
-        Files.writeString(rutaAtletaArchivo, atleta, StandardOpenOption.APPEND);
+        Files.writeString(rutaAtletaArchivo, atleta.replaceAll("[\\[\\]]+", ""), StandardOpenOption.APPEND);
         System.out.println("Se realizo exitosamente el registro del atleta");
         }
     }

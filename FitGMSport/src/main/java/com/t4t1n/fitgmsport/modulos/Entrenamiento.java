@@ -29,7 +29,9 @@ public class Entrenamiento {
 
     @Override
     public String toString() {
-        return '\n' + "Entrenamiento{" + "code=" + code + ", entrenamiento=" + entrenamiento + ", categoriaEntrenamiento=" + categoriaEntrenamiento + '}';
+        return '\n' + "Codigo: " + code + '\n' + 
+                "Entrenamiento: " + entrenamiento + '\n' + 
+                "Categoria: " + categoriaEntrenamiento.getTipo() + '\n';
     }
 
     

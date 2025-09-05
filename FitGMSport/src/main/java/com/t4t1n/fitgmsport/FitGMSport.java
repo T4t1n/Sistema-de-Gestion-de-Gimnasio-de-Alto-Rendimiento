@@ -1,4 +1,3 @@
-
 package com.t4t1n.fitgmsport;
 
 import com.t4t1n.fitgmsport.principal.Principal;

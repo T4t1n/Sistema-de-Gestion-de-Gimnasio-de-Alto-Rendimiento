@@ -22,6 +22,6 @@ public class Recreativo extends Atleta{
     
     @Override
     public String toString(){
-        return super.toString() + '\n' + "Objetivo: " + objetivo.getObjetivo();
+        return super.toString() + '\n' + "Objetivo: " + objetivo.getObjetivo() + "\n";
     }
 }

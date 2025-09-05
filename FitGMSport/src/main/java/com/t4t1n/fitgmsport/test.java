@@ -1,26 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.t4t1n.fitgmsport;
 import com.t4t1n.fitgmsport.modulos.Entrenamiento;
 import com.t4t1n.fitgmsport.recursos.Categoria;
 import com.t4t1n.fitgmsport.recursos.GuardarEnArchivo;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 import java.util.Scanner;
-import org.apache.commons.lang3.StringUtils;
+
 
 /**
  *
@@ -52,31 +39,41 @@ public class test {
         
         
         Scanner sc = new Scanner(System.in);
-        String texto;
-        
-        System.out.println("Ingrese palabra a buscar");
-        texto = sc.nextLine();
-        
-        Path  path = Path.of("Atletas.txt");
-        int pos = -1;
-        try {
-            List<String> lista = Files.readAllLines(path);
-            String cad = "";
-            for (int i = 0; i < lista.size(); i++) {
-                pos = lista.get(i).indexOf(texto);
-                if(pos != -1) {
-                    cad += "Se encontró la palabra en la linea " + 
-                            i +" posición " + pos + "\n";
-                    String im =  lista.get(i);
-                    System.out.println(im);
-                }
-                
-                
-            }
-            System.out.println(cad);
-        }catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+//        String texto;
+//        String categoria;
+//        
+//        
+//        System.out.println("Ingrese la categoria: ");
+//        categoria = sc.nextLine();
+//        System.out.println("Ingrese el tipo de entrenamiento: ");
+//        texto = sc.nextLine();
+//        
+//        
+//        Path  path = Path.of("Entrenamientos.txt");
+//        int pos = -1;
+//        try {
+//            List<String> lista = Files.readAllLines(path);
+//            String cad = "";
+//            String im = "";
+//            for (int i = 0; i < lista.size(); i++) {
+//                pos = lista.get(i).indexOf(texto);
+//                if(pos != -1) {
+//                    cad += "Se encontró la palabra en la linea " + 
+//                            i +" posición " + pos + "\n";
+//                    im =  lista.get(i+1);  
+//                }
+//            }
+//           
+//            if (!"Categoria: Recreativo]".equalsIgnoreCase(im) && categoria.equals("Recreativo")){
+//               System.out.println("No se puede debe debes elegir uno recreativo");
+//            }else {
+//                System.out.println("lo lograste");
+//            }
+//            System.out.println(im);
+//            System.out.println(cad);
+//        }catch (Exception e) {
+//            System.out.println(e.getMessage());
+//        }
         
         
         
@@ -188,31 +185,31 @@ public class test {
 ////            contador++;
 ////        }while(contador != 5);
 //        
-//        
-//        String entrenamiento;
-//        String categoria;
-//        String seguir = "Y";
-//        List<Entrenamiento> en = new ArrayList<>();
-//        List<String> entxt = new ArrayList<>();
-//        String last;
-//        
-//        
-//        while(seguir.contains("Y")){
-//            System.out.println("Entrenamiento: ");
-//            entrenamiento = sc.nextLine();
-//            System.out.println("Categoria: ");
-//            categoria = sc.nextLine();
-//            Categoria categoriaValidation = Categoria.valueOf(categoria.toUpperCase());
-//            en.add(new Entrenamiento(entrenamiento, categoriaValidation));
-//            entxt.add(en.toString());
-//            last = entxt.getLast();
-//            //GuardarEnArchivo.entrenamientos(last);
-//            Path rutaEntrenamientos1 = Paths.get("Entrenamientos1.txt");
-//            Files.createFile(rutaEntrenamientos1);
-//            Files.writeString(rutaEntrenamientos1, last, StandardOpenOption.APPEND);
-//            System.out.println("Need to insert more?");
-//            seguir = sc.nextLine();
-//        }
+        
+        String entrenamiento;
+        String categoria;
+        String seguir = "Y";
+        List<Entrenamiento> en = new ArrayList<>();
+        List<String> entxt = new ArrayList<>();
+        String last;
+        
+        
+        //while(seguir.contains("Y")){
+            System.out.println("Entrenamiento: ");
+            entrenamiento = sc.nextLine();
+            System.out.println("Categoria: ");
+            categoria = sc.nextLine();
+            Categoria categoriaValidation = Categoria.valueOf(categoria.toUpperCase());
+            en.add(new Entrenamiento(entrenamiento, categoriaValidation));
+            entxt.add(en.toString());
+            last = entxt.getLast();
+            GuardarEnArchivo.entrenamientos(last);
+            //Path rutaEntrenamientos1 = Paths.get("Entrenamientos1.txt");
+            //Files.createFile(rutaEntrenamientos1);
+            //Files.writeString(rutaEntrenamientos1, last, StandardOpenOption.APPEND);
+            //System.out.println("Need to insert more?");
+            //seguir = sc.nextLine();
+        //}
         
 
 

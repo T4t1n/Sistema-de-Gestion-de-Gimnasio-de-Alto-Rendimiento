@@ -1,0 +1,12 @@
+
+Codigo: GYM0689
+Entrenamiento: Trabajo fisico militar
+Categoria: PROFESIONAL
+
+Codigo: GYM0704
+Entrenamiento: Levantamiento de peso
+Categoria: RECREATIVO
+
+Codigo: GYM0709
+Entrenamiento: Sentadillas de galacticos
+Categoria: Profesional

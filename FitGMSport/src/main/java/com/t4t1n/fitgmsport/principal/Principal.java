@@ -68,9 +68,35 @@ public class Principal {
         DescripcionEntrenamiento tipoEnv2 = DescripcionEntrenamiento.valueOf(tipoEn);
         
         
-
+           switch(tipo){
+               case RECREATIVO -> {
+                   System.out.println("Inserta tu objetivo:");
+               String objetivo = sc.nextLine();
+               String tipoObj = Objetivo.valueOfOrDefault(objetivo);
+               Objetivo obv2 = Objetivo.valueOf(tipoObj);
+               atleta.add( new Recreativo(nombre, identificacion, edad, estatura, tipo, tipoEnv2, obv2));
+               }
+               case PROFESIONAL -> {
+                   System.out.println("Digite el peso en kilogramos: ");
+               peso = sc.nextDouble();
+               System.out.println("Digite el porcetaje de grasa del atleta: ");
+               porcentajeDeGrasa = sc.nextInt();
+               atleta.add(new Profesional(nombre, identificacion, edad, estatura, tipo, tipoEnv2, peso, porcentajeDeGrasa));
+               }
+               case COMPETITIVO -> {
+                   System.out.println("Digite el peso en kilogramos: ");
+               peso = sc.nextDouble();
+               sc.nextLine();
+               System.out.println("Digite el porcetaje de grasa del atleta: ");
+               porcentajeDeGrasa = sc.nextInt();
+               atleta.add(new Competitivo(nombre, identificacion, edad, estatura, tipo, tipoEnv2, peso, porcentajeDeGrasa));
+               }
+               default -> {
+                   System.out.println("No existe esa categoria o digitos mal ingresados.");
+               }
+           }
            
-           
+           /*
            if (tipo == Categoria.RECREATIVO){
                System.out.println("Inserta tu objetivo:");
                String objetivo = sc.nextLine();
@@ -91,6 +117,7 @@ public class Principal {
                porcentajeDeGrasa = sc.nextInt();
                atleta.add(new Competitivo(nombre, identificacion, edad, estatura, tipo, tipoEnv2, peso, porcentajeDeGrasa));
            }
+*/
            atletaTxt.add(atleta.toString());
            atletaTexto = atletaTxt.getLast();
            GuardarEnArchivo.atletas(atletaTexto);

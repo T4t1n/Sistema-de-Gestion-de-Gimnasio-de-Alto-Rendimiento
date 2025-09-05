@@ -97,7 +97,7 @@ public class Atleta {
 
     @Override
     public String toString() {
-        return  "Fecha de registro: " + fechaRegistro + '\n' +
+        return  '\n' + "Fecha de registro: " + fechaRegistro + '\n' +
                 "Nombre del atleta: " + nombreAtleta + '\n' +
                 "Identificación: " + identificacion + '\n' + 
                 "Edad: " + edad + " años" + '\n' +
