@@ -2,7 +2,6 @@
 package com.t4t1n.fitgmsport.modulos;
 
 import com.t4t1n.fitgmsport.recursos.Categoria;
-import com.t4t1n.fitgmsport.recursos.DescripcionEntrenamiento;
 import com.t4t1n.fitgmsport.recursos.Objetivo;
 
 /**
@@ -15,7 +14,7 @@ public class Recreativo extends Atleta{
     
     public Recreativo(){}
     
-    public Recreativo(String nombre, String identificacion, int edad, int estatura, Categoria categoria, DescripcionEntrenamiento entrenamiento, Objetivo objetivo){
+    public Recreativo(String nombre, String identificacion, int edad, int estatura, Categoria categoria, String entrenamiento, Objetivo objetivo){
         super(nombre, identificacion, edad, estatura, categoria, entrenamiento);
         this.objetivo = objetivo;
     }

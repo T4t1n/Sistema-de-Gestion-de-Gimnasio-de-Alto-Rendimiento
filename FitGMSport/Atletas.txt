@@ -47,3 +47,12 @@ Categoria: Competitivo
 Entrenamiento: Trabajo físico intensivo
 Peso:45.0
 Porcentaje de Grasa: 37
+
+Fecha de registro: 2025-09-05
+Nombre del atleta: Manuel Locatelli
+Identificación: 444444444
+Edad: 29 años
+Estatura: 187 cm
+Categoria: Recreativo
+Entrenamiento: Calistenia dura y pura
+Objetivo: Bajar de peso

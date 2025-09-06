@@ -1,12 +1,8 @@
 
-Codigo: GYM0689
-Entrenamiento: Trabajo fisico militar
-Categoria: PROFESIONAL
-
-Codigo: GYM0704
-Entrenamiento: Levantamiento de peso
-Categoria: RECREATIVO
-
-Codigo: GYM0709
-Entrenamiento: Sentadillas de galacticos
+Codigo: GYM0701
+Entrenamiento: Trabajo fisico intensivo
 Categoria: Profesional
+
+Codigo: GYM0575
+Entrenamiento: Calistenia dura y pura
+Categoria: Recreativo

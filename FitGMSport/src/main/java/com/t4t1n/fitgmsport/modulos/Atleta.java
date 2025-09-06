@@ -24,13 +24,13 @@ public class Atleta {
    // NumberFormat formatter = new DecimalFormat("#0");
     private int estatura;
     private Categoria categoria;
-    private DescripcionEntrenamiento entrenamiento;
+    private String entrenamiento;
     
     
     public Atleta() {
         
     }
-    public Atleta(String nombre, String identificacion, int edad, int estatura, Categoria categoria, DescripcionEntrenamiento entrenamiento ){
+    public Atleta(String nombre, String identificacion, int edad, int estatura, Categoria categoria, String entrenamiento ){
         if (Validaciones.validarString(1, nombre)){
             this.nombreAtleta = nombre;
         }else {
@@ -103,7 +103,7 @@ public class Atleta {
                 "Edad: " + edad + " años" + '\n' +
                 "Estatura: " + estatura + " cm" + '\n' +
                 "Categoria: " + categoria.getTipo() + '\n' +
-                "Entrenamiento: " + entrenamiento.getTipoEntrenamiento();
+                "Entrenamiento: " + entrenamiento;
     }
 
 

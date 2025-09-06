@@ -2,7 +2,6 @@
 package com.t4t1n.fitgmsport.modulos;
 
 import com.t4t1n.fitgmsport.recursos.Categoria;
-import com.t4t1n.fitgmsport.recursos.DescripcionEntrenamiento;
 import java.util.Random;
 
 /**
