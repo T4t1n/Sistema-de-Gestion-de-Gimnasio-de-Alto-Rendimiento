@@ -83,25 +83,26 @@ public class Principal {
            switch(tipo){
                case RECREATIVO -> {
                    System.out.println("Inserta tu objetivo:");
-               String objetivo = sc.nextLine();
-               String tipoObj = Objetivo.valueOfOrDefault(objetivo);
-               Objetivo obv2 = Objetivo.valueOf(tipoObj);
-               atleta.add( new Recreativo(nombre, identificacion, edad, estatura, tipo, entrenamiento, obv2));
+                   String objetivo = sc.nextLine();
+                   String tipoObj = Objetivo.valueOfOrDefault(objetivo);
+                   Objetivo obv2 = Objetivo.valueOf(tipoObj);
+                   atleta.add( new Recreativo(nombre, identificacion, edad, estatura, tipo, entrenamiento, obv2));
                }
                case PROFESIONAL -> {
                    System.out.println("Digite el peso en kilogramos: ");
-               peso = sc.nextDouble();
-               System.out.println("Digite el porcetaje de grasa del atleta: ");
-               porcentajeDeGrasa = sc.nextInt();
-               atleta.add(new Profesional(nombre, identificacion, edad, estatura, tipo, entrenamiento, peso, porcentajeDeGrasa));
+                   peso = sc.nextDouble();
+                   //sc.nextLine();
+                   System.out.println("Digite el porcetaje de grasa del atleta: ");
+                   porcentajeDeGrasa = sc.nextInt();
+                   atleta.add(new Profesional(nombre, identificacion, edad, estatura, tipo, entrenamiento, peso, porcentajeDeGrasa));
                }
                case COMPETITIVO -> {
                    System.out.println("Digite el peso en kilogramos: ");
-               peso = sc.nextDouble();
-               sc.nextLine();
-               System.out.println("Digite el porcetaje de grasa del atleta: ");
-               porcentajeDeGrasa = sc.nextInt();
-               atleta.add(new Competitivo(nombre, identificacion, edad, estatura, tipo, entrenamiento, peso, porcentajeDeGrasa));
+                   peso = sc.nextDouble();
+                   sc.nextLine();
+                   System.out.println("Digite el porcetaje de grasa del atleta: ");
+                   porcentajeDeGrasa = sc.nextInt();
+                   atleta.add(new Competitivo(nombre, identificacion, edad, estatura, tipo, entrenamiento, peso, porcentajeDeGrasa));
                }
                default -> {
                    System.out.println("No existe esa categoria o digitos mal ingresados.");

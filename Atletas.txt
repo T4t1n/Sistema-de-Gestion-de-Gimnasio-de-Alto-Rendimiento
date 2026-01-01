@@ -1,0 +1,68 @@
+
+Fecha de registro: 2026-01-01
+Nombre del atleta: null
+Identificación: 702880337
+Edad: 26 años
+Estatura: 186 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio hit para bajar de peso
+Peso:30.0
+Porcentaje de grasa: 0
+
+Fecha de registro: 2026-01-01
+Nombre del atleta: Virgil
+Identificación: 702880337
+Edad: 34 años
+Estatura: 195 cm
+Categoria: Recreativo
+Entrenamiento: Trabajo intensivo de profesionales
+Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-01
+Nombre del atleta: Manuel
+Identificación: 702880337
+Edad: 27 años
+Estatura: 186 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio hit para bajar de peso
+Peso:75.0
+Porcentaje de grasa: 0
+
+Fecha de registro: 2026-01-01
+Nombre del atleta: Locatelli
+Identificación: 702880337
+Edad: 27 años
+Estatura: 186 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio hit para bajar de peso
+Peso:75.0
+Porcentaje de grasa: 0
+
+Fecha de registro: 2026-01-01
+Nombre del atleta: null
+Identificación: 702880337
+Edad: 23 años
+Estatura: 170 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio hit para bajar de peso
+Peso:64.0
+Porcentaje de grasa: 40
+
+Fecha de registro: 2026-01-01
+Nombre del atleta: Manuel Locatelli
+Identificación: 702880337
+Edad: 23 años
+Estatura: 165 cm
+Categoria: Recreativo
+Entrenamiento: Trabajo intensivo de profesionales
+Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-01
+Nombre del atleta: Francisco Conceição
+Identificación: 702880337
+Edad: 23 años
+Estatura: 170 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio hit para bajar de peso
+Peso:64.0
+Porcentaje de grasa: 40

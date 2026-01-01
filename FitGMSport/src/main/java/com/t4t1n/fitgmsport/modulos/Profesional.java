@@ -25,7 +25,7 @@ public class Profesional extends Atleta{
         if (porcentajeDeGrasa < 35) {
             System.out.println("Error");
         } else  {
-            this. porcentajeDeGrasa = porcentajeDeGrasa;
+            this.porcentajeDeGrasa = porcentajeDeGrasa;
         }
     }
     

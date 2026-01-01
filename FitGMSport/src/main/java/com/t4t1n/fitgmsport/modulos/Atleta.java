@@ -2,10 +2,7 @@
 package com.t4t1n.fitgmsport.modulos;
 
 import com.t4t1n.fitgmsport.recursos.Categoria;
-import com.t4t1n.fitgmsport.recursos.DescripcionEntrenamiento;
 import com.t4t1n.fitgmsport.recursos.Validaciones;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -40,7 +37,7 @@ public class Atleta {
         if (Validaciones.validarString(2, identificacion)){
             this.identificacion = identificacion;
         }else {
-            System.out.println("Nombre no registrado correctamente.");
+            System.out.println("Identificación no registrado correctamente.");
         }
         
         if (Validaciones.validarInt(1, edad)){

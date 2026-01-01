@@ -1,0 +1,12 @@
+
+Codigo: GYM0320
+Entrenamiento: Trabajo intensivo de profesionales
+Categoria: Recreativo
+
+Codigo: GYM0970
+Entrenamiento: Ejercicio hit para bajar de peso
+Categoria: Profesional
+
+Codigo: GYM0910
+Entrenamiento: 1
+Categoria: Recreativo

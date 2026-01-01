@@ -15,7 +15,8 @@ public abstract class Validaciones {
         
         
         switch(tipoDeValidacion){
-            case 1:  return valor.matches("^(?=.{4,20}$)([A-Z][a-z]+)(\\s[A-Z][a-z]+)*$");
+            //case 1:  return valor.matches("^(?=.{4,20}$)([A-Z][a-z]+)(\\s[A-Z][a-z]+)*$");
+            case 1:  return valor.matches("^(?=.{4,30}$)([A-ZÀ-Ü][a-zà-ÿçñ]+)(\\s[A-ZÀ-Ü][a-zà-ÿçñ]+)*$");
             case 2: return valor.matches("^(?=.{9}$)(\\d)*$");
             default: return false;
                 
