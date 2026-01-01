@@ -22,6 +22,7 @@ public class Entrenamiento {
         
     }
 
+
     public String getCode() {
         return code;
     }

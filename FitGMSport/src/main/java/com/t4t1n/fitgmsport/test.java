@@ -11,6 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import static com.t4t1n.fitgmsport.principal.Principal.cargarEntrenamientos;
+
 
 /**
  *
@@ -19,7 +21,7 @@ import java.util.Scanner;
 public class test {
     
     public static void main(String[] args) throws Exception {
-        
+  /*
         Scanner sc = new Scanner(System.in);
         List <Atleta> at1 = new ArrayList<>();
         File file = new File("Atletas.txt");
@@ -31,7 +33,10 @@ public class test {
             ois.close();
         }
         
-        System.out.println(at1);
+        System.out.println(at1);*/
+
+        System.out.println(cargarEntrenamientos().get(0));
+
         
     }
 }

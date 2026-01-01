@@ -11,6 +11,9 @@ import com.t4t1n.fitgmsport.recursos.DescripcionEntrenamiento;
 import com.t4t1n.fitgmsport.recursos.GuardarEnArchivo;
 import com.t4t1n.fitgmsport.recursos.Objetivo;
 import com.t4t1n.fitgmsport.recursos.Validaciones;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -123,7 +126,8 @@ public class Principal {
             System.out.println("Como hay un error no se pudo imprimir.");
         }
     }
-    
+
+    // Method to ask for data and finally save.
     public void ingresarDatosEntrenamiento() {
         System.out.println("Porfavor ingrese los siguientes datos: ");
         System.out.println("Ingrese el tipo de entrenamientos");
@@ -139,9 +143,29 @@ public class Principal {
         } catch (IOException ex) {
             System.out.println(ex);
         }
-        
-        
-        
     }
-    
+
+    // Method to ask for name and finally delete a training
+    public void ingresarDatosParaEliminar(){
+        System.out.println("Porfavor ingrese el codigo del entreamiento: ");
+        String codigoABuscar = sc.nextLine();
+    }
+
+    public static ArrayList<String> cargarEntrenamientos() {
+        ArrayList<String> entrenamientosInformacionLista = new ArrayList<>();
+        try(BufferedReader reader = new BufferedReader(new FileReader("Entrenamientos.txt"))) {
+            String line;
+            while ((line =  reader.readLine()) != null) {
+                entrenamientosInformacionLista.add(line);
+            }
+            return entrenamientosInformacionLista;
+
+        }catch(IOException e){
+            System.out.println("Error" + e);
+            return new ArrayList<String>();
+
+        }
+    }
 }
+
+

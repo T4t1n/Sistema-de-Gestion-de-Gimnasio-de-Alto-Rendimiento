@@ -26,7 +26,7 @@ public class FitGMSport {
         System.out.println("2. Registrar entrenamiento/s");
         System.out.println("3. Salir.");
         
-        System.out.println("Elija una opcion:");
+        System.out.println("Elija una opción:");
         String op = sc.nextLine();
         switch(op) {
             case "1" -> {
