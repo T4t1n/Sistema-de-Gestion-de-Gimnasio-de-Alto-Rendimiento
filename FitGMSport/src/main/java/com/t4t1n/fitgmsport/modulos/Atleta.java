@@ -2,10 +2,7 @@
 package com.t4t1n.fitgmsport.modulos;
 
 import com.t4t1n.fitgmsport.recursos.Categoria;
-import com.t4t1n.fitgmsport.recursos.Entrenamiento;
 import com.t4t1n.fitgmsport.recursos.Validaciones;
-import java.text.DecimalFormat;
-import java.text.NumberFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -24,35 +21,31 @@ public class Atleta {
    // NumberFormat formatter = new DecimalFormat("#0");
     private int estatura;
     private Categoria categoria;
-    private Entrenamiento entrenamiento;
+    private String entrenamiento;
     
     
     public Atleta() {
         
     }
-    public Atleta(String nombre, String identificacion, int edad, int estatura, Categoria categoria, Entrenamiento entrenamiento ){
+    public Atleta(String nombre, String identificacion, int edad, int estatura, Categoria categoria, String entrenamiento ){
         if (Validaciones.validarString(1, nombre)){
-            System.out.println("se realizo exitosamente!");
             this.nombreAtleta = nombre;
         }else {
             System.out.println("Nombre no registrado correctamente.");
         }
         
         if (Validaciones.validarString(2, identificacion)){
-            System.out.println("Se realizo exitosamente");
             this.identificacion = identificacion;
         }else {
-            System.out.println("Nombre no registrado correctamente.");
+            System.out.println("Identificación no registrado correctamente.");
         }
         
         if (Validaciones.validarInt(1, edad)){
-            System.out.println("Se realizo exitosamente!");
             this.edad = edad;
         } else {
             System.out.println("Edad no registrada correctamente");
         }
         if (estatura > 0){
-            System.out.println("Se realizo exitosamente!");
             this.estatura = estatura;
         }else {
             System.out.println("Estatura no registrado correctamente");
@@ -101,13 +94,13 @@ public class Atleta {
 
     @Override
     public String toString() {
-        return  "Fecha de registro: " + fechaRegistro + '\n' +
+        return  '\n' + "Fecha de registro: " + fechaRegistro + '\n' +
                 "Nombre del atleta: " + nombreAtleta + '\n' +
                 "Identificación: " + identificacion + '\n' + 
                 "Edad: " + edad + " años" + '\n' +
                 "Estatura: " + estatura + " cm" + '\n' +
                 "Categoria: " + categoria.getTipo() + '\n' +
-                "Entrenamiento: " + entrenamiento.getTipoEntrenamiento();
+                "Entrenamiento: " + entrenamiento;
     }
 
 

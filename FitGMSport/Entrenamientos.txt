@@ -1,0 +1,8 @@
+
+Codigo: GYM0701
+Entrenamiento: Trabajo fisico intensivo
+Categoria: Profesional
+
+Codigo: GYM0575
+Entrenamiento: Calistenia dura y pura
+Categoria: Recreativo
