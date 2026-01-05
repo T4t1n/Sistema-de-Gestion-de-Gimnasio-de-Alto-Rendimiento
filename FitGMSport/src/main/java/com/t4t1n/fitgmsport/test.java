@@ -1,6 +1,7 @@
 
 package com.t4t1n.fitgmsport;
 import com.t4t1n.fitgmsport.modulos.Atleta;
+import com.t4t1n.fitgmsport.modulos.Entrenamiento;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -49,54 +50,49 @@ public class test {
         deleteFromFile(FILENAME, name);
 */
 
+        List<String> list =
+
         readFromFile(FILENAME, true);
+
+        List<Entrenamiento> lista = (new ArrayList<Entrenamiento>)list;
         
     }
 
     // Method to read a file
-    private static String[] readFromFile(String file, boolean shouldPrint){
-        FileReader fr = null;
-        BufferedReader br = null;
-        try {
-            fr = new FileReader(file);
-            br = new BufferedReader(fr);
+    private static List<String> readFromFile(String file, boolean shouldPrint){
+        //FileReader fr = null;
+       // BufferedReader br = null;
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+            //fr = new FileReader(file);
+            //br = new BufferedReader(fr);
 
-            int numLines = 0;
-            while(br.readLine() != null) {
-                numLines++;
-            }
+           // int numLines = 0;
+            //while(br.readLine() != null) {
+           //     numLines++;
+           // }
 
-            String[] allLines = new String[numLines];
+           // String[] allLines = new String[numLines];
+            List<String> lista = new ArrayList<>();
 
-            int itr = 0;
+            //int itr = 0;
             String name;
 
-            br.close();
+            //br.close();
 
-            fr = new FileReader(file);
-            br = new BufferedReader(fr);
+            //fr = new FileReader(file);
+           // br = new BufferedReader(fr);
 
             while ((name = br.readLine()) != null) {
-                if (shouldPrint) System.out.print(name);
-                allLines[itr++] = name;
+                System.out.println(name);
             }
 
-            return allLines;
+            return lista;
         } catch (IOException error) {
             System.out.println("Error while reading name from " + file + ". ERR: " + error);
             return null;
 
-        } finally {
-            try {
-                if (br != null) {
-                    br.close();
-                }
-                if (fr != null) {
-                    fr.close();
-                }
-            }catch (IOException error) {
-                System.out.println("Error in closing " + file + ".Err: " + error);
-            }
+
+
         }
     }
 
@@ -106,6 +102,6 @@ public class test {
     // Method to delete a data
     private static void deleteFromFile(String file, String name) {
         boolean isWordFound = false;
-        String data[] = readFromFile(file, false);
+        //String data[] = readFromFile(file, false);
     }
 }
