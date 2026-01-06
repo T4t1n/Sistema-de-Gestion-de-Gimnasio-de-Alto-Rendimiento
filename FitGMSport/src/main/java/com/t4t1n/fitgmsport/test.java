@@ -50,46 +50,37 @@ public class test {
         deleteFromFile(FILENAME, name);
 */
 
-        List<String> list =
 
         readFromFile(FILENAME, true);
 
-        List<Entrenamiento> lista = (new ArrayList<Entrenamiento>)list;
+
         
     }
 
     // Method to read a file
-    private static List<String> readFromFile(String file, boolean shouldPrint){
-        //FileReader fr = null;
-       // BufferedReader br = null;
+    private static void readFromFile(String file, boolean shouldPrint){
+
         try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-            //fr = new FileReader(file);
-            //br = new BufferedReader(fr);
 
-           // int numLines = 0;
-            //while(br.readLine() != null) {
-           //     numLines++;
-           // }
 
-           // String[] allLines = new String[numLines];
             List<String> lista = new ArrayList<>();
 
-            //int itr = 0;
+
             String name;
+            String code = "Codigo: GYM0320";
 
-            //br.close();
 
-            //fr = new FileReader(file);
-           // br = new BufferedReader(fr);
 
             while ((name = br.readLine()) != null) {
-                System.out.println(name);
+                    if (name.equalsIgnoreCase(code)) System.out.println(name);
+                
+
             }
 
-            return lista;
+            //return ;
         } catch (IOException error) {
             System.out.println("Error while reading name from " + file + ". ERR: " + error);
-            return null;
+            //return null;
 
 
 
