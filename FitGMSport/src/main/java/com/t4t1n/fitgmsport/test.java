@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Scanner;
 
 import static com.t4t1n.fitgmsport.principal.Principal.cargarEntrenamientos;
+import static java.lang.String.valueOf;
 
 
 /**
@@ -19,7 +20,9 @@ import static com.t4t1n.fitgmsport.principal.Principal.cargarEntrenamientos;
  */
 public class test {
 
-    final static String FILENAME = "Entrenamientos.txt";
+     static private final String FILENAME = "Entrenamientos.txt";
+     static private FileReader fileReaderDDBB = null;
+     static private BufferedReader bufferedReaderDDBB = null;
     
     public static void main(String[] args) throws IOException {
   /*
@@ -49,50 +52,25 @@ public class test {
         String name = sc.nextLine();
         deleteFromFile(FILENAME, name);
 */
+        try {
+            fileReaderDDBB = new FileReader(FILENAME);
+            bufferedReaderDDBB = new BufferedReader(fileReaderDDBB);
+            String line = "";
+            while((line = bufferedReaderDDBB.readLine()) != null){
+                String[] parts = line.split(" ");
+                System.out.println(valueOf(parts));
 
+            }
 
-        readFromFile(FILENAME, true);
+        }catch(FileNotFoundException fnfe) {
+            System.out.println("No hay ningun archivo");
+
+        }
+
 
 
         
     }
 
-    // Method to read a file
-    private static void readFromFile(String file, boolean shouldPrint){
 
-        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
-
-
-            List<String> lista = new ArrayList<>();
-
-
-            String name;
-            String code = "Codigo: GYM0320";
-
-
-
-            while ((name = br.readLine()) != null) {
-                    if (name.equalsIgnoreCase(code)) System.out.println(name);
-                
-
-            }
-
-            //return ;
-        } catch (IOException error) {
-            System.out.println("Error while reading name from " + file + ". ERR: " + error);
-            //return null;
-
-
-
-        }
-    }
-
-
-
-
-    // Method to delete a data
-    private static void deleteFromFile(String file, String name) {
-        boolean isWordFound = false;
-        //String data[] = readFromFile(file, false);
-    }
 }
