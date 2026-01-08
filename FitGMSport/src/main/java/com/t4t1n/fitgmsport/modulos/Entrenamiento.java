@@ -34,5 +34,10 @@ public class Entrenamiento {
                 "Categoria: " + categoriaEntrenamiento.getTipo() + '\n';
     }
 
+    //Esto es para probar una forma de guardar. //Realizado el 7 de enero del 2026
+    public String writeTXT(){
+        return getCode() + " " + entrenamiento + " " + categoriaEntrenamiento.getTipo();
+    }
+
     
 }

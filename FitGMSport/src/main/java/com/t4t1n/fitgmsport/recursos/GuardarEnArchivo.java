@@ -1,6 +1,8 @@
 
 package com.t4t1n.fitgmsport.recursos;
 
+import com.t4t1n.fitgmsport.modulos.Entrenamiento;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -8,6 +10,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.List;
 
 /**
  *
@@ -37,6 +40,15 @@ public class GuardarEnArchivo {
         } else {
         Files.writeString(rutaAtletaArchivo, atleta.replaceAll("[\\[\\]]+", ""), StandardOpenOption.APPEND);
         System.out.println("Se realizo exitosamente el registro del atleta");
+        }
+    }
+
+
+    public void addProduct(List<Entrenamiento> entrenamientos) {
+        try {
+
+        } catch () {
+
         }
     }
     
