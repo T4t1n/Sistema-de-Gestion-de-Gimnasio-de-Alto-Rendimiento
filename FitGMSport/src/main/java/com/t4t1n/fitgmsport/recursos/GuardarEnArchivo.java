@@ -17,6 +17,8 @@ import java.util.List;
  * @author Jaimisky
  */
 public class GuardarEnArchivo {
+    static private FileWriter fileWriterDDBB = null;
+    static private final String FILE = "Entrenamientos.txt";
     
     //*** Metodo estatico que guarda los entrenamientos en archivo Entrenamientos.txt ***
     //** Utilizando la libreria de file y file writer
@@ -46,10 +48,19 @@ public class GuardarEnArchivo {
 
     public void addProduct(List<Entrenamiento> entrenamientos) {
         try {
+            fileWriterDDBB = new FileWriter(FILE, true);
+            for(int i=0; i<entrenamientos.size(); i++){
+                fileWriterDDBB.write(entrenamientos.get(i).writeTXT()+"\n");
+            }
 
-        } catch () {
+        } catch (IOException e) {
+            System.out.println("No hay un archivo");
+        } finally {
+            try {
+                fileWriterDDBB.close();
+            } catch (IOException e) {
 
+            }
         }
     }
-    
 }
