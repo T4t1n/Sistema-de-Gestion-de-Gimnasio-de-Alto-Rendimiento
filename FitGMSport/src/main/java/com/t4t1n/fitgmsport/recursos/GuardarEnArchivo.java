@@ -46,9 +46,9 @@ public class GuardarEnArchivo {
     }
 
 
-    public void addProduct(List<Entrenamiento> entrenamientos) {
+    public static void addProduct(List<Entrenamiento> entrenamientos) {
         try {
-            fileWriterDDBB = new FileWriter(FILE, true);
+            fileWriterDDBB = new FileWriter("EntrenamientosV2.txt", true);
             for(int i=0; i<entrenamientos.size(); i++){
                 fileWriterDDBB.write(entrenamientos.get(i).writeTXT()+"\n");
             }

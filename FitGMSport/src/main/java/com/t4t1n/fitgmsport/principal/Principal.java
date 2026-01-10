@@ -16,6 +16,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -138,6 +139,14 @@ public class Principal {
             en.add(new Entrenamiento(tipoEntrenamiento, categoriaValidation));
             entxt.add(en.toString());
             last = entxt.getLast();
+
+            Entrenamiento entrenamiento = new Entrenamiento(tipoEntrenamiento, categoriaValidation);
+            ArrayList<Entrenamiento> entrenamientos = new ArrayList<>();
+            entrenamientos.add(entrenamiento);
+            GuardarEnArchivo.addProduct(new ArrayList<Entrenamiento>(Arrays.asList(entrenamiento)));
+
+
+
         try {
             GuardarEnArchivo.entrenamientos(last);
         } catch (IOException ex) {
@@ -163,7 +172,6 @@ public class Principal {
         }catch(IOException e){
             System.out.println("Error" + e);
             return new ArrayList<String>();
-
         }
     }
 }
