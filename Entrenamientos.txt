@@ -10,3 +10,15 @@ Categoria: Profesional
 Codigo: GYM0910
 Entrenamiento: 1
 Categoria: Recreativo
+
+Codigo: GYM0136
+Entrenamiento: Trabajo de locos
+Categoria: Recreativo
+
+Codigo: GYM0745
+Entrenamiento: Entrenamiento de enfermos de clase mundial
+Categoria: Profesional
+
+Codigo: GYM0532
+Entrenamiento: Trabajo de locos
+Categoria: Profesional

@@ -3,14 +3,15 @@ package com.t4t1n.fitgmsport.recursos;
 
 import com.t4t1n.fitgmsport.modulos.Entrenamiento;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
 import java.util.List;
+
+import static java.lang.String.valueOf;
 
 /**
  *
@@ -18,7 +19,9 @@ import java.util.List;
  */
 public class GuardarEnArchivo {
     static private FileWriter fileWriterDDBB = null;
-    static private final String FILE = "Entrenamientos.txt";
+    static private FileReader fileReaderDDBB = null;
+    static private BufferedReader bufferedReaderDDBB = null;
+    static private final String FILE = "EntrenamientosV2.txt";
     
     //*** Metodo estatico que guarda los entrenamientos en archivo Entrenamientos.txt ***
     //** Utilizando la libreria de file y file writer
@@ -45,8 +48,8 @@ public class GuardarEnArchivo {
         }
     }
 
-
-    public static void addProduct(List<Entrenamiento> entrenamientos) {
+    //This method is the actual to save entrenamientos created.
+    public static void anadirEntrenamientos(List<Entrenamiento> entrenamientos) {
         try {
             fileWriterDDBB = new FileWriter("EntrenamientosV2.txt", true);
             for(int i=0; i<entrenamientos.size(); i++){
@@ -62,5 +65,42 @@ public class GuardarEnArchivo {
 
             }
         }
+    }
+
+
+    public static ArrayList<Entrenamiento> obtenerTodoEntrenamiento() {
+        ArrayList<Entrenamiento> nuevosEntrenamientos = new ArrayList<>();
+        try{
+            fileReaderDDBB = new FileReader(FILE);
+            bufferedReaderDDBB = new BufferedReader(fileReaderDDBB);
+            String line = "";
+            while((line = bufferedReaderDDBB.readLine()) != null) {
+                String[] parts = line.split(":");
+                String code = parts[0];
+                System.out.println(code);
+                String tipoEntrenamiento = parts[1];
+                System.out.println(tipoEntrenamiento);
+                Categoria categoriaEntrenamiento = Categoria.valueOf(parts[3].toUpperCase());
+                System.out.println(categoriaEntrenamiento);
+                Entrenamiento entrenamiento = new Entrenamiento(code, tipoEntrenamiento);
+                nuevosEntrenamientos.add(entrenamiento);
+            }
+        }catch(FileNotFoundException fnfe){
+            System.out.println("There is no such file");
+        }catch(IOException e) {
+            System.out.println("Something happend with the file");
+        }catch (ArrayIndexOutOfBoundsException siobe){
+            System.out.println("The are extra blank lines in the file");
+        }catch (NumberFormatException nfe){
+            System.out.println("The are extra blank lines in the file");
+        }finally {
+            try {
+                fileReaderDDBB.close();
+                bufferedReaderDDBB.close();
+            }catch(IOException e) {
+
+            }
+        }
+        return nuevosEntrenamientos;
     }
 }

@@ -130,6 +130,8 @@ public class Principal {
 
     // Method to ask for data and finally save.
     public void ingresarDatosEntrenamiento() {
+        ArrayList<Entrenamiento> entrenamientosnew = GuardarEnArchivo.obtenerTodoEntrenamiento();
+        System.out.println(entrenamientosnew);
         System.out.println("Porfavor ingrese los siguientes datos: ");
         System.out.println("Ingrese el tipo de entrenamientos");
         tipoEntrenamiento = sc.nextLine();
@@ -143,7 +145,7 @@ public class Principal {
             Entrenamiento entrenamiento = new Entrenamiento(tipoEntrenamiento, categoriaValidation);
             ArrayList<Entrenamiento> entrenamientos = new ArrayList<>();
             entrenamientos.add(entrenamiento);
-            GuardarEnArchivo.addProduct(new ArrayList<Entrenamiento>(Arrays.asList(entrenamiento)));
+            GuardarEnArchivo.anadirEntrenamientos(new ArrayList<Entrenamiento>(Arrays.asList(entrenamiento)));
 
 
 
@@ -159,6 +161,7 @@ public class Principal {
         System.out.println("Porfavor ingrese el codigo del entreamiento: ");
         String codigoABuscar = sc.nextLine();
     }
+
 
     public static ArrayList<String> cargarEntrenamientos() {
         ArrayList<String> entrenamientosInformacionLista = new ArrayList<>();

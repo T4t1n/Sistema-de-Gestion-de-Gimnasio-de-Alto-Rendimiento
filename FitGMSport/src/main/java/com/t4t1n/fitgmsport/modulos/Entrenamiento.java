@@ -22,6 +22,12 @@ public class Entrenamiento {
         
     }
 
+    public Entrenamiento(String code, String tipoEntrenamiento){
+        this.code = code;
+        this.entrenamiento = tipoEntrenamiento;
+        //this.categoriaEntrenamiento = categoriaEn;
+    }
+
 
     public String getCode() {
         return code;
