@@ -22,10 +22,10 @@ public class Entrenamiento {
         
     }
 
-    public Entrenamiento(String code, String tipoEntrenamiento){
+    public Entrenamiento(String code, String tipoEntrenamiento, Categoria categoria){
         this.code = code;
         this.entrenamiento = tipoEntrenamiento;
-        //this.categoriaEntrenamiento = categoriaEn;
+        this.categoriaEntrenamiento = categoria;
     }
 
 
@@ -42,7 +42,7 @@ public class Entrenamiento {
 
     //Esto es para probar una forma de guardar. //Realizado el 7 de enero del 2026
     public String writeTXT(){
-        return getCode() + " " + entrenamiento + " " + categoriaEntrenamiento.getTipo();
+        return getCode() + "," + entrenamiento + "," + categoriaEntrenamiento.getTipo();
     }
 
     

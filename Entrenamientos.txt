@@ -22,3 +22,7 @@ Categoria: Profesional
 Codigo: GYM0532
 Entrenamiento: Trabajo de locos
 Categoria: Profesional
+
+Codigo: GYM0940
+Entrenamiento: Trabajo de kang el conquistador
+Categoria: Recreativo
