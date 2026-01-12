@@ -50,20 +50,14 @@ public class GuardarEnArchivo {
 
     //This method is the actual to save entrenamientos created.
     public static void anadirEntrenamientos(List<Entrenamiento> entrenamientos) {
-        try {
-            fileWriterDDBB = new FileWriter("EntrenamientosV2.txt", true);
+        try(FileWriter fileWriterDDBB = new FileWriter("EntrenamientosV2.txt", true)) {
+            //fileWriterDDBB = new FileWriter("EntrenamientosV2.txt", true);
             for(int i=0; i<entrenamientos.size(); i++){
                 fileWriterDDBB.write(entrenamientos.get(i).writeTXT()+"\n");
             }
 
         } catch (IOException e) {
             System.out.println("No hay un archivo");
-        } finally {
-            try {
-                fileWriterDDBB.close();
-            } catch (IOException e) {
-
-            }
         }
     }
 

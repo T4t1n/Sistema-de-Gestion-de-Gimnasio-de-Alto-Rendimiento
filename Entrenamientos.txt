@@ -34,3 +34,7 @@ Categoria: Profesional
 Codigo: GYM0164
 Entrenamiento: Ejercicio fit para tonificar
 Categoria: Competitivo
+
+Codigo: GYM0892
+Entrenamiento: Jumping para playitos
+Categoria: Recreativo

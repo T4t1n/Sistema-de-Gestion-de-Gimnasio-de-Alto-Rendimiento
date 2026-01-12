@@ -130,8 +130,8 @@ public class Principal {
 
     // Method to ask for data and finally save.
     public void ingresarDatosEntrenamiento() {
-        ArrayList<Entrenamiento> entrenamientosnew = GuardarEnArchivo.obtenerTodoEntrenamiento();
-        entrenamientosnew.toString();
+       // ArrayList<Entrenamiento> entrenamientosnew = GuardarEnArchivo.obtenerTodoEntrenamiento();
+       // System.out.println(entrenamientosnew);
         System.out.println("Porfavor ingrese los siguientes datos: ");
         System.out.println("Ingrese el tipo de entrenamientos");
         tipoEntrenamiento = sc.nextLine();
@@ -156,11 +156,7 @@ public class Principal {
         }
     }
 
-    // Method to ask for name and finally delete a training
-    public void ingresarDatosParaEliminar(){
-        System.out.println("Porfavor ingrese el codigo del entreamiento: ");
-        String codigoABuscar = sc.nextLine();
-    }
+
 
 
     public static ArrayList<String> cargarEntrenamientos() {
@@ -176,6 +172,21 @@ public class Principal {
             System.out.println("Error" + e);
             return new ArrayList<String>();
         }
+    }
+
+
+    // Method to ask for name and finally delete a training
+    public void eliminarEntrenamiento(ArrayList<Entrenamiento> entrenamientos){
+        entrenamientos.forEach(System.out::println);
+
+        System.out.println("Introduce el codigo del entrenamiento a eliminar: ");
+        String text = sc.next();
+
+    }
+
+
+    public static String buscarEntrenamiento(String texto, ArrayList<Entrenamiento> entrenamientos) {
+        
     }
 }
 
