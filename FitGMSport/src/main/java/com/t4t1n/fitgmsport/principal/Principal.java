@@ -131,7 +131,7 @@ public class Principal {
     // Method to ask for data and finally save.
     public void ingresarDatosEntrenamiento() {
         ArrayList<Entrenamiento> entrenamientosnew = GuardarEnArchivo.obtenerTodoEntrenamiento();
-        System.out.println(entrenamientosnew);
+        entrenamientosnew.toString();
         System.out.println("Porfavor ingrese los siguientes datos: ");
         System.out.println("Ingrese el tipo de entrenamientos");
         tipoEntrenamiento = sc.nextLine();

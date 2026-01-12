@@ -77,11 +77,8 @@ public class GuardarEnArchivo {
             while((line = bufferedReaderDDBB.readLine()) != null) {
                 String[] parts = line.split(",");
                 String code = parts[0];
-                System.out.println(code);
                 String tipoEntrenamiento = parts[1];
-                System.out.println(tipoEntrenamiento);
                 Categoria categoriaEntrenamiento = Categoria.valueOf(parts[2].toUpperCase());
-                System.out.println(categoriaEntrenamiento);
                 Entrenamiento entrenamiento = new Entrenamiento(code, tipoEntrenamiento, categoriaEntrenamiento);
                 nuevosEntrenamientos.add(entrenamiento);
             }

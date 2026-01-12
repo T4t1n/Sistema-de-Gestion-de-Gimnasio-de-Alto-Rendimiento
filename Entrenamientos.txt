@@ -26,3 +26,11 @@ Categoria: Profesional
 Codigo: GYM0940
 Entrenamiento: Trabajo de kang el conquistador
 Categoria: Recreativo
+
+Codigo: GYM0429
+Entrenamiento: Trabajo de adelgazar piernas
+Categoria: Profesional
+
+Codigo: GYM0164
+Entrenamiento: Ejercicio fit para tonificar
+Categoria: Competitivo
