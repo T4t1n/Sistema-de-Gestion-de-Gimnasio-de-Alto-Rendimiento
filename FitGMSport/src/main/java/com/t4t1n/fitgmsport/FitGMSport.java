@@ -22,6 +22,7 @@ public class FitGMSport {
     
 
     public static void main(String[] args) throws IOException, Exception {
+        ArrayList<Entrenamiento> entrenamientos = GuardarEnArchivo.obtenerTodoEntrenamiento();
         Scanner sc = new Scanner(System.in);
         Path rutaArchivoEntrenamientos = Paths.get("Entrenamientos.txt");
         Principal demo = new Principal();
@@ -46,10 +47,14 @@ public class FitGMSport {
             }
             case "3" -> {
                 System.out.println("Eliminar entrenamiento:");
-                ArrayList<Entrenamiento> entrenamientos = GuardarEnArchivo.obtenerTodoEntrenamiento();
+
                 demo.eliminarEntrenamiento(entrenamientos);
             }
-            case "4" -> {System.out.println("Saliendo");}
+            case "4" -> {
+                System.out.println("Modificar entrenamiento:");
+                demo.modificarEntrenamiento(entrenamientos);
+            }
+            case "5" -> {System.out.println("Saliendo");}
             default -> {System.out.println("elija bien");}
         }
     }   

@@ -94,4 +94,16 @@ public class GuardarEnArchivo {
         }
         return nuevosEntrenamientos;
     }
+
+    public static void actualizarEntrenamientos(List<Entrenamiento> entrenamientos) {
+        try(FileWriter fileWriterDDBB = new FileWriter(FILE)){
+            for(int i= 0; i < entrenamientos.size(); i++) {
+                fileWriterDDBB.write(entrenamientos.get(i).writeTXT()+"\n");
+            }
+        }catch(IOException e) {
+            System.out.println("No hay archivo.");
+        }
+    }
+
+
 }

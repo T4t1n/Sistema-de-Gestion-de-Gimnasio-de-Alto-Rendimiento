@@ -1,4 +1,3 @@
 GYM0410,Trabajo de kang el conquistador,Recreativo
 GYM0584,Trabajo de adelgazar piernas,Profesional
 GYM0047,Ejercicio fit para tonificar,Competitivo
-GYM0895,Jumping para playitos,Recreativo

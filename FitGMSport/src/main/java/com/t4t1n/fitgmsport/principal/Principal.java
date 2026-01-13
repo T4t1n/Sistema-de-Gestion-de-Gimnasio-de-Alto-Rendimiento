@@ -180,13 +180,59 @@ public class Principal {
         entrenamientos.forEach(System.out::println);
 
         System.out.println("Introduce el codigo del entrenamiento a eliminar: ");
-        String text = sc.next();
+        String texto = sc.next();
+
+        int index = buscarEntrenamiento(texto, entrenamientos);
+
+        if(index == -1) {
+            System.out.println("X No se ha encontrado el entrenamiento:");
+        }else {
+            entrenamientos.remove(index);
+            GuardarEnArchivo.actualizarEntrenamientos(entrenamientos);
+        }
+
+    }
+
+    public void modificarEntrenamiento(ArrayList<Entrenamiento> entrenamientos) {
+        entrenamientos.forEach(System.out::println);
+
+        System.out.println("Introduce el codigo del entrenamiento a modificar: ");
+        String texto = sc.next();
+
+        int index = buscarEntrenamiento(texto, entrenamientos);
+
+        if(index == -1) {
+            System.out.println("X No se ha encontrado el entrenamiento: ");
+        }else {
+            System.out.println("Que desea modificar: ");
+            System.out.println("1.Tipo de entrenamiento: ");
+            System.out.println("2.Categoria de entrenamiento: ");
+            String opc = sc.nextLine();
+            switch(opc){
+                case "1" -> {
+                    System.out.println("Ingrese el tipo de entrenam");
+                }
+            }
+        }
 
     }
 
 
-    public static String buscarEntrenamiento(String texto, ArrayList<Entrenamiento> entrenamientos) {
-        
+    public static int buscarEntrenamiento(String texto, ArrayList<Entrenamiento> entrenamientos) {
+        int index = -1;
+        int counter = 0;
+
+        while(counter < entrenamientos.size() && index == -1){
+
+            if(entrenamientos.get(counter).getCode().equalsIgnoreCase(texto)) {
+
+                index = counter;
+            }
+
+            counter++;
+
+        }
+        return index;
     }
 }
 
