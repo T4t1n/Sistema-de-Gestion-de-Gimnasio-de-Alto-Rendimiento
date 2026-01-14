@@ -30,7 +30,8 @@ public class FitGMSport {
         System.out.println("1. Registrar jugador/es");
         System.out.println("2. Registrar entrenamiento/s");
         System.out.println("3. Eliminar entrenamiento/s");
-        System.out.println("4. Salir.");
+        System.out.println("4. Modificar entrenamiento/s");
+        System.out.println("5. Salir.");
         
         System.out.println("Elija una opción:");
         String op = sc.nextLine();

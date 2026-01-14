@@ -33,6 +33,22 @@ public class Entrenamiento {
         return code;
     }
 
+    public String getEntrenamiento(){
+        return this.entrenamiento;
+    }
+
+    public void setEntrenamiento(String entrenamiento) {
+        this.entrenamiento = entrenamiento;
+    }
+
+    public Categoria getCategoriaEntrenamiento() {
+        return this.categoriaEntrenamiento;
+    }
+
+    public void setCategoriaEntrenamiento(Categoria categoria) {
+        this.categoriaEntrenamiento = categoria;
+    }
+
     @Override
     public String toString() {
         return '\n' + "Codigo: " + code + '\n' + 

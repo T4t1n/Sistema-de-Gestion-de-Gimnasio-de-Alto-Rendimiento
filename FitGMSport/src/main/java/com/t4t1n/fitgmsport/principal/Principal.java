@@ -197,7 +197,7 @@ public class Principal {
         entrenamientos.forEach(System.out::println);
 
         System.out.println("Introduce el codigo del entrenamiento a modificar: ");
-        String texto = sc.next();
+        String texto = sc.nextLine();
 
         int index = buscarEntrenamiento(texto, entrenamientos);
 
@@ -207,14 +207,25 @@ public class Principal {
             System.out.println("Que desea modificar: ");
             System.out.println("1.Tipo de entrenamiento: ");
             System.out.println("2.Categoria de entrenamiento: ");
+            System.out.println("Elija una opción: ");
             String opc = sc.nextLine();
             switch(opc){
                 case "1" -> {
-                    System.out.println("Ingrese el tipo de entrenam");
+                    System.out.println("Ingrese el tipo de entrenamiento: ");
+                    String entrenamiento = sc.nextLine();
+                    entrenamientos.get(index).setEntrenamiento(entrenamiento);
+                }
+                case "2" -> {
+                    System.out.println("Ingrese la categoria: ");
+                    Categoria categoriaValidada = Categoria.valueOf(sc.nextLine().toUpperCase());
+                    entrenamientos.get(index).setCategoriaEntrenamiento(categoriaValidada);
+                }
+                default -> {
+                    System.out.println("Elija bien");
                 }
             }
+            GuardarEnArchivo.actualizarEntrenamientos(entrenamientos);
         }
-
     }
 
 
