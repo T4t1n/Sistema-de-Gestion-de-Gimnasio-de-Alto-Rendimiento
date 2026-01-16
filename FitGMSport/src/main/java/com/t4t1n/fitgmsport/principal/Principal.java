@@ -159,7 +159,7 @@ public class Principal {
 
 
 
-    public static ArrayList<String> cargarEntrenamientos() {
+ /*   public static ArrayList<String> cargarEntrenamientos() {
         ArrayList<String> entrenamientosInformacionLista = new ArrayList<>();
         try(BufferedReader reader = new BufferedReader(new FileReader("Entrenamientos.txt"))) {
             String line;
@@ -172,7 +172,7 @@ public class Principal {
             System.out.println("Error" + e);
             return new ArrayList<String>();
         }
-    }
+    }*/
 
 
     // Method to ask for name and finally delete a training
