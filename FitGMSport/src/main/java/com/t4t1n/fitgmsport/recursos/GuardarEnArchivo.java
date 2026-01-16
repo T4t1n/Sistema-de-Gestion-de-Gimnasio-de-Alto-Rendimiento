@@ -18,12 +18,12 @@ import static java.lang.String.valueOf;
  * @author Jaimisky
  */
 public class GuardarEnArchivo {
-    static private FileWriter fileWriterDDBB = null;
+    //static private FileWriter fileWriterDDBB = null;
     static private FileReader fileReaderDDBB = null;
     static private BufferedReader bufferedReaderDDBB = null;
-    static private final String FILE = "EntrenamientosV2.txt";
+    static private final String FILE = "Entrenamientos.txt";
     
-    //*** Metodo estatico que guarda los entrenamientos en archivo Entrenamientos.txt ***
+  /*  //*** Metodo estatico que guarda los entrenamientos en archivo Entrenamientos.txt ***
     //** Utilizando la libreria de file y file writer
     public static void entrenamientos(String entrenamiento) throws IOException {
         File Archivo = new File("Entrenamientos.txt");
@@ -31,7 +31,7 @@ public class GuardarEnArchivo {
             file.append(entrenamiento.replaceAll("[\\[\\]]+", ""));
             System.out.println("Se realizo exitosamente el registro del entrenamiento");
         }
-    }
+    }*/
     
     //*** Metodo estatico que que guarda los atletas en archivo Atletas.txt ***
     //** Utilizando la libreria de file y path, paths.
@@ -50,7 +50,7 @@ public class GuardarEnArchivo {
 
     //This method is the actual to save entrenamientos created.
     public static void anadirEntrenamientos(List<Entrenamiento> entrenamientos) {
-        try(FileWriter fileWriterDDBB = new FileWriter("EntrenamientosV2.txt", true)) {
+        try(FileWriter fileWriterDDBB = new FileWriter(FILE, true)) {
             //fileWriterDDBB = new FileWriter("EntrenamientosV2.txt", true);
             for(int i=0; i<entrenamientos.size(); i++){
                 fileWriterDDBB.write(entrenamientos.get(i).writeTXT()+"\n");
@@ -84,14 +84,14 @@ public class GuardarEnArchivo {
             System.out.println("The are extra blank lines in the file");
         }catch (NumberFormatException nfe){
             System.out.println("The are extra blank lines in the file");
-        }finally {
+        }/*finally {
             try {
                 fileReaderDDBB.close();
                 bufferedReaderDDBB.close();
             }catch(IOException e) {
 
             }
-        }
+        }*/
         return nuevosEntrenamientos;
     }
 

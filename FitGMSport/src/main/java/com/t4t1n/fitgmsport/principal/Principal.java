@@ -149,11 +149,11 @@ public class Principal {
 
 
 
-        try {
-            GuardarEnArchivo.entrenamientos(last);
-        } catch (IOException ex) {
-            System.out.println(ex);
-        }
+//        try {
+//            GuardarEnArchivo.entrenamientos(last);
+//        } catch (IOException ex) {
+//            System.out.println(ex);
+//        }
     }
 
 

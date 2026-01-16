@@ -1,8 +1,10 @@
 
 package com.t4t1n.fitgmsport.recursos;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 /**
@@ -53,6 +55,23 @@ public abstract class Validaciones {
         }
         
         
+    }
+
+    public static void validarEntrenamiento(String en, String cate) {
+        Path ruta = Paths.get("Entrenamientos.txt");
+        int counter = 0;
+        String im = "";
+
+        try {
+
+            List<String> lines = Files.readAllLines(ruta);
+            while(counter < lines.size()){
+                if (lines.get(counter).get)
+            }
+
+        }catch(IOException e){
+            e.printStackTrace(e);
+        }
     }
     static void validate(String im, String categoriaEntrenamiento)throws CustomException {
            if(!"Categoria: Recreativo".equals(im) && categoriaEntrenamiento.equals("Recreativo")){
