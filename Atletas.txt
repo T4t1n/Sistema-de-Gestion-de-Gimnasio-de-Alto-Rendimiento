@@ -75,3 +75,31 @@ Estatura: 186 cm
 Categoria: Recreativo
 Entrenamiento: Ejercicio calistenico
 Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: Juan
+Identificación: 702880337
+Edad: 45 años
+Estatura: 178 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: null
+Identificación: 702880337
+Edad: 41 años
+Estatura: 160 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio calistenico
+Peso:85.0
+Porcentaje de grasa: 40
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: Lopez Yigi
+Identificación: 702880337
+Edad: 32 años
+Estatura: 176 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Mejorar resistencia

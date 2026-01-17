@@ -81,12 +81,13 @@ public abstract class Validaciones {
             System.exit(0);
         }
     }
-    static void validate(String im, String categoriaEntrenamiento)throws CustomException {
-           if(!"Recreativo".equals(im) && categoriaEntrenamiento.equals("Recreativo")){
+    static void validate(String im, String categoriaJugador)throws CustomException {
+          /* if(!"Recreativo".equals(im) && categoriaJugador.equals("Recreativo")){
                 throw new CustomException("Number must be greater than zero. esto remal");
-            } 
+            }  i dont know what i will want do it with this!*/
+
+        if(!im.equals(categoriaJugador)) {
+            throw new CustomException("Number must be greater than zero. esto remal");
         }
-    
-    
-    
+        }
 }
