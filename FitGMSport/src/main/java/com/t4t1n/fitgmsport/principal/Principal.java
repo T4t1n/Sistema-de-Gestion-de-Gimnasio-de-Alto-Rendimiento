@@ -70,7 +70,7 @@ public class Principal {
         System.out.println("Ingrese el tipo de entrenamiento: ");
         entrenamiento = sc.nextLine();
         
-        Validaciones.validarTipoEntrenamiento(entrenamiento, categoria);
+        Validaciones.validarEntrenamiento(entrenamiento, categoria);
         
         creandoObjeto(nombre, identificacion,edad, estatura, categoria, entrenamiento, peso, porcentajeDeGrasa); 
         

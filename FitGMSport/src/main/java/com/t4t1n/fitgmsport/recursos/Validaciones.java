@@ -65,17 +65,25 @@ public abstract class Validaciones {
         try {
 
             List<String> lines = Files.readAllLines(ruta);
-            while(counter < lines.size()){
-                if (lines.get(counter).get)
-            }
+            for(String line : lines) {
+                if (line.contains(en)) {
+                    String[] parts = line.split(",");
+                    im = parts[2].trim();
 
+                }
+            }
+            System.out.println(im);
+            validate(im, cate);
         }catch(IOException e){
-            e.printStackTrace(e);
+            e.printStackTrace();
+        }catch(Exception e) {
+            System.out.println(e.getMessage());
+            System.exit(0);
         }
     }
     static void validate(String im, String categoriaEntrenamiento)throws CustomException {
-           if(!"Categoria: Recreativo".equals(im) && categoriaEntrenamiento.equals("Recreativo")){
-                throw new CustomException("Number must be greater than zero.");
+           if(!"Recreativo".equals(im) && categoriaEntrenamiento.equals("Recreativo")){
+                throw new CustomException("Number must be greater than zero. esto remal");
             } 
         }
     

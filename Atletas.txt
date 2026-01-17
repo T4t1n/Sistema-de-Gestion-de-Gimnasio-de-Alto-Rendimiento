@@ -66,3 +66,12 @@ Categoria: Profesional
 Entrenamiento: Ejercicio hit para bajar de peso
 Peso:64.0
 Porcentaje de grasa: 40
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: Juan
+Identificación: 702880337
+Edad: 45 años
+Estatura: 186 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Mejorar resistencia
