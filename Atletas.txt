@@ -103,3 +103,30 @@ Estatura: 176 cm
 Categoria: Recreativo
 Entrenamiento: Ejercicio calistenico
 Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: osman potra
+Identificación: 702880337
+Edad: 45 años
+Estatura: 186 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: HARRY MAGUIRE
+Identificación: 702880337
+Edad: 27 años
+Estatura: 189 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: null
+Identificación: 702880337
+Edad: 35 años
+Estatura: 189 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Mejorar resistencia

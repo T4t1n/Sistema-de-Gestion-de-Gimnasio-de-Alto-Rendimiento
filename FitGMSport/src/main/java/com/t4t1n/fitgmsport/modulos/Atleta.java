@@ -29,7 +29,7 @@ public class Atleta {
     }
     public Atleta(String nombre, String identificacion, int edad, int estatura, Categoria categoria, String entrenamiento ){
         if (Validaciones.validarString(1, nombre)){
-            this.nombreAtleta = nombre;
+            this.nombreAtleta = nombre.toUpperCase();
         }else {
             System.out.println("Nombre no registrado correctamente.");
         }

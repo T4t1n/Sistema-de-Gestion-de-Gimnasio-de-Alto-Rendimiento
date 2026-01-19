@@ -18,7 +18,7 @@ public abstract class Validaciones {
         
         switch(tipoDeValidacion){
             //case 1:  return valor.matches("^(?=.{4,20}$)([A-Z][a-z]+)(\\s[A-Z][a-z]+)*$");
-            case 1:  return valor.matches("^(?=.{4,30}$)([A-ZÀ-Ü][a-zà-ÿçñ]+)(\\s[A-ZÀ-Ü][a-zà-ÿçñ]+)*$");
+            case 1:  return valor.matches("^(?=.{4,30}$)([a-zà-ÿçñ]+)(\\s[a-zà-ÿçñ]+)*$");
             case 2: return valor.matches("^(?=.{9}$)(\\d)*$");
             default: return false;
                 
@@ -86,7 +86,7 @@ public abstract class Validaciones {
                 throw new CustomException("Number must be greater than zero. esto remal");
             }  i dont know what i will want do it with this!*/
 
-        if(!im.equals(categoriaJugador)) {
+        if(!im.equalsIgnoreCase(categoriaJugador)) {
             throw new CustomException("Number must be greater than zero. esto remal");
         }
         }
