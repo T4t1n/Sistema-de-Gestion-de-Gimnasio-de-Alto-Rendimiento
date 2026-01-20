@@ -15,10 +15,7 @@ import com.t4t1n.fitgmsport.recursos.Validaciones;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 
 /**
@@ -67,11 +64,15 @@ public class Principal {
         sc.nextLine();
         System.out.println("Ingrese su categoria: ");
         categoria = sc.nextLine();
-        System.out.println("Ingrese el tipo de entrenamiento: ");
-        entrenamiento = sc.nextLine();
-        
-        Validaciones.validarEntrenamiento(entrenamiento, categoria);
-        
+        String seguir = "s";
+        while(seguir.equals("s")){
+            System.out.println("Ingrese el tipo de entrenamiento: ");
+            entrenamiento = sc.nextLine();
+            Validaciones.validarEntrenamiento(entrenamiento, categoria);
+            System.out.println("Deseas seguir:");
+            seguir = sc.nextLine();
+        }
+
         creandoObjeto(nombre, identificacion,edad, estatura, categoria, entrenamiento, peso, porcentajeDeGrasa); 
         
     }

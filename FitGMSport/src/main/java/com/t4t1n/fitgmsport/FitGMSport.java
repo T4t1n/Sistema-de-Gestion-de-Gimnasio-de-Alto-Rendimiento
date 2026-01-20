@@ -43,7 +43,7 @@ public class FitGMSport {
                     System.out.println("Debes tener entrenamientos registrados");
                 }
             }
-            case "2" -> {System.out.println("Registrar datos:");
+            case "2" -> {System.out.println("Registrar datos entrenamientos:");
                     demo.ingresarDatosEntrenamiento();
             }
             case "3" -> {

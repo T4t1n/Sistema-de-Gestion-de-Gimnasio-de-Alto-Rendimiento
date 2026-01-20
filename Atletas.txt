@@ -130,3 +130,21 @@ Estatura: 189 cm
 Categoria: Recreativo
 Entrenamiento: Ejercicio calistenico
 Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-19
+Nombre del atleta: null
+Identificación: 702880337
+Edad: 25 años
+Estatura: 156 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Bajar de peso
+
+Fecha de registro: 2026-01-19
+Nombre del atleta: PIERRECK ABUAMEYANG
+Identificación: 702880337
+Edad: 34 años
+Estatura: 181 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Bajar de peso
