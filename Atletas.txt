@@ -148,3 +148,12 @@ Estatura: 181 cm
 Categoria: Recreativo
 Entrenamiento: Ejercicio calistenico
 Objetivo: Bajar de peso
+
+Fecha de registro: 2026-01-20
+Nombre del atleta: CARLO ANCELLOTI
+Identificación: 702880337
+Edad: 54 años
+Estatura: 189 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico, Ejercicio calistenico
+Objetivo: Mejorar resistencia

@@ -4,6 +4,8 @@ package com.t4t1n.fitgmsport.modulos;
 import com.t4t1n.fitgmsport.recursos.Categoria;
 import com.t4t1n.fitgmsport.recursos.DescripcionEntrenamiento;
 
+import java.util.List;
+
 
 /**
  *
@@ -13,7 +15,7 @@ public class Competitivo extends Atleta {
     private double peso; // en kilogramos
     private int porcentajeDeGrasa; // Entero ya sera procentaje.
     public Competitivo(){};
-    public Competitivo(String nombre, String identificacion, int edad, int estatura, Categoria categoria, String entrenamiento, double peso, int porcentajeDeGrasa) {
+    public Competitivo(String nombre, String identificacion, int edad, int estatura, Categoria categoria, List<String> entrenamiento, double peso, int porcentajeDeGrasa) {
         super(nombre, identificacion, edad, estatura, categoria, entrenamiento);
         if (peso < 0 ) {
             System.out.println("Error.");

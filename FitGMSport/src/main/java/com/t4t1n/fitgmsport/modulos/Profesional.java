@@ -3,6 +3,8 @@ package com.t4t1n.fitgmsport.modulos;
 
 import com.t4t1n.fitgmsport.recursos.Categoria;
 
+import java.util.List;
+
 /**
  *
  * @author Jaimisky
@@ -14,7 +16,7 @@ public class Profesional extends Atleta{
     
     public Profesional(){};
     
-    public Profesional(String nombre, String identificacion, int edad, int estatura, Categoria categoria, String entrenamiento, double peso, int porcentajeDeGrasa) {
+    public Profesional(String nombre, String identificacion, int edad, int estatura, Categoria categoria, List<String> entrenamiento, double peso, int porcentajeDeGrasa) {
         super(nombre, identificacion, edad, estatura, categoria, entrenamiento);
         if (peso < 0) {
             System.out.println("Error");

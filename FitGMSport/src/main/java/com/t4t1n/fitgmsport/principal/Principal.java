@@ -31,7 +31,7 @@ public class Principal {
     int edad;
     int estatura;
     String categoria;
-    String entrenamiento;
+    List<String> entrenamiento = new ArrayList<>();
     double peso;
     int porcentajeDeGrasa;
     
@@ -67,22 +67,23 @@ public class Principal {
         String seguir = "s";
         while(seguir.equals("s")){
             System.out.println("Ingrese el tipo de entrenamiento: ");
-            entrenamiento = sc.nextLine();
-            Validaciones.validarEntrenamiento(entrenamiento, categoria);
+            String entrenamientoParaJugador = sc.nextLine();
+            Validaciones.validarEntrenamiento(entrenamientoParaJugador, categoria);
+            entrenamiento.add(entrenamientoParaJugador);
             System.out.println("Deseas seguir:");
             seguir = sc.nextLine();
         }
 
-        creandoObjeto(nombre, identificacion,edad, estatura, categoria, entrenamiento, peso, porcentajeDeGrasa); 
+        creandoObjeto(nombre, identificacion,edad, estatura, categoria, entrenamiento, peso, porcentajeDeGrasa);
         
     }
     
-    public void creandoObjeto(String nombre, String identificacion, int edad, int estatura, String categoria, String entrenamiento, double peso, int porcentaje) throws IOException {
+    public void creandoObjeto(String nombre, String identificacion, int edad, int estatura, String categoria, List<String> entrenamiento, double peso, int porcentaje) throws IOException {
         String entrada1 = categoria.toUpperCase();
         
         try{
         Categoria tipo = Categoria.valueOf(entrada1);
-        String tipoEn = DescripcionEntrenamiento.valueOfOrDefault(entrenamiento);
+        //String tipoEn = DescripcionEntrenamiento.valueOfOrDefault(entrenamiento);
         
         
            switch(tipo){

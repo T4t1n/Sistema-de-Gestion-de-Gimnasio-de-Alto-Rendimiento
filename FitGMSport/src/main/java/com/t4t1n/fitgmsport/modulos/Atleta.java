@@ -5,6 +5,8 @@ import com.t4t1n.fitgmsport.recursos.Categoria;
 import com.t4t1n.fitgmsport.recursos.Validaciones;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -21,13 +23,13 @@ public class Atleta {
    // NumberFormat formatter = new DecimalFormat("#0");
     private int estatura;
     private Categoria categoria;
-    private String entrenamiento;
+    private List<String> entrenamiento = new ArrayList<>();
     
     
     public Atleta() {
         
     }
-    public Atleta(String nombre, String identificacion, int edad, int estatura, Categoria categoria, String entrenamiento ){
+    public Atleta(String nombre, String identificacion, int edad, int estatura, Categoria categoria, List<String> entrenamiento ){
         if (Validaciones.validarString(1, nombre)){
             this.nombreAtleta = nombre.toUpperCase();
         }else {
@@ -89,8 +91,14 @@ public class Atleta {
         return estatura;
     }
 
-    
-    
+
+    public List<String> getEntrenamiento() {
+        return entrenamiento;
+    }
+
+    public void setEntrenamiento(List<String> entrenamiento) {
+        this.entrenamiento = entrenamiento;
+    }
 
     @Override
     public String toString() {
@@ -100,7 +108,7 @@ public class Atleta {
                 "Edad: " + edad + " años" + '\n' +
                 "Estatura: " + estatura + " cm" + '\n' +
                 "Categoria: " + categoria.getTipo() + '\n' +
-                "Entrenamiento: " + entrenamiento;
+                "Entrenamiento: " + getEntrenamiento();
     }
 
 
