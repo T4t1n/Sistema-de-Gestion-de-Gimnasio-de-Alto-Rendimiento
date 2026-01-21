@@ -11,10 +11,11 @@ import com.t4t1n.fitgmsport.recursos.DescripcionEntrenamiento;
 import com.t4t1n.fitgmsport.recursos.GuardarEnArchivo;
 import com.t4t1n.fitgmsport.recursos.Objetivo;
 import com.t4t1n.fitgmsport.recursos.Validaciones;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 
 /**
@@ -30,7 +31,7 @@ public class Principal {
     int edad;
     int estatura;
     String categoria;
-    String entrenamiento;
+    List<String> entrenamiento = new ArrayList<>();
     double peso;
     int porcentajeDeGrasa;
     
@@ -63,21 +64,26 @@ public class Principal {
         sc.nextLine();
         System.out.println("Ingrese su categoria: ");
         categoria = sc.nextLine();
-        System.out.println("Ingrese el tipo de entrenamiento: ");
-        entrenamiento = sc.nextLine();
-        
-        Validaciones.validarTipoEntrenamiento(entrenamiento, categoria);
-        
-        creandoObjeto(nombre, identificacion,edad, estatura, categoria, entrenamiento, peso, porcentajeDeGrasa); 
+        String seguir = "s";
+        while(seguir.equals("s")){
+            System.out.println("Ingrese el tipo de entrenamiento: ");
+            String entrenamientoParaJugador = sc.nextLine();
+            Validaciones.validarEntrenamiento(entrenamientoParaJugador, categoria);
+            entrenamiento.add(entrenamientoParaJugador);
+            System.out.println("Deseas seguir:");
+            seguir = sc.nextLine();
+        }
+
+        creandoObjeto(nombre, identificacion,edad, estatura, categoria, entrenamiento, peso, porcentajeDeGrasa);
         
     }
     
-    public void creandoObjeto(String nombre, String identificacion, int edad, int estatura, String categoria, String entrenamiento, double peso, int porcentaje) throws IOException {
+    public void creandoObjeto(String nombre, String identificacion, int edad, int estatura, String categoria, List<String> entrenamiento, double peso, int porcentaje) throws IOException {
         String entrada1 = categoria.toUpperCase();
         
         try{
         Categoria tipo = Categoria.valueOf(entrada1);
-        String tipoEn = DescripcionEntrenamiento.valueOfOrDefault(entrenamiento);
+        //String tipoEn = DescripcionEntrenamiento.valueOfOrDefault(entrenamiento);
         
         
            switch(tipo){
@@ -123,8 +129,11 @@ public class Principal {
             System.out.println("Como hay un error no se pudo imprimir.");
         }
     }
-    
+
+    // Method to ask for data and finally save.
     public void ingresarDatosEntrenamiento() {
+       // ArrayList<Entrenamiento> entrenamientosnew = GuardarEnArchivo.obtenerTodoEntrenamiento();
+       // System.out.println(entrenamientosnew);
         System.out.println("Porfavor ingrese los siguientes datos: ");
         System.out.println("Ingrese el tipo de entrenamientos");
         tipoEntrenamiento = sc.nextLine();
@@ -134,14 +143,110 @@ public class Principal {
             en.add(new Entrenamiento(tipoEntrenamiento, categoriaValidation));
             entxt.add(en.toString());
             last = entxt.getLast();
-        try {
-            GuardarEnArchivo.entrenamientos(last);
-        } catch (IOException ex) {
-            System.out.println(ex);
-        }
-        
-        
-        
+
+            Entrenamiento entrenamiento = new Entrenamiento(tipoEntrenamiento, categoriaValidation);
+            ArrayList<Entrenamiento> entrenamientos = new ArrayList<>();
+            entrenamientos.add(entrenamiento);
+            GuardarEnArchivo.anadirEntrenamientos(new ArrayList<Entrenamiento>(Arrays.asList(entrenamiento)));
+
+
+
+//        try {
+//            GuardarEnArchivo.entrenamientos(last);
+//        } catch (IOException ex) {
+//            System.out.println(ex);
+//        }
     }
-    
+
+
+
+
+ /*   public static ArrayList<String> cargarEntrenamientos() {
+        ArrayList<String> entrenamientosInformacionLista = new ArrayList<>();
+        try(BufferedReader reader = new BufferedReader(new FileReader("Entrenamientos.txt"))) {
+            String line;
+            while ((line =  reader.readLine()) != null) {
+                entrenamientosInformacionLista.add(line);
+            }
+            return entrenamientosInformacionLista;
+
+        }catch(IOException e){
+            System.out.println("Error" + e);
+            return new ArrayList<String>();
+        }
+    }*/
+
+
+    // Method to ask for name and finally delete a training
+    public void eliminarEntrenamiento(ArrayList<Entrenamiento> entrenamientos){
+        entrenamientos.forEach(System.out::println);
+
+        System.out.println("Introduce el codigo del entrenamiento a eliminar: ");
+        String texto = sc.next();
+
+        int index = buscarEntrenamiento(texto, entrenamientos);
+
+        if(index == -1) {
+            System.out.println("X No se ha encontrado el entrenamiento:");
+        }else {
+            entrenamientos.remove(index);
+            GuardarEnArchivo.actualizarEntrenamientos(entrenamientos);
+        }
+
+    }
+
+    public void modificarEntrenamiento(ArrayList<Entrenamiento> entrenamientos) {
+        entrenamientos.forEach(System.out::println);
+
+        System.out.println("Introduce el codigo del entrenamiento a modificar: ");
+        String texto = sc.nextLine();
+
+        int index = buscarEntrenamiento(texto, entrenamientos);
+
+        if(index == -1) {
+            System.out.println("X No se ha encontrado el entrenamiento: ");
+        }else {
+            System.out.println("Que desea modificar: ");
+            System.out.println("1.Tipo de entrenamiento: ");
+            System.out.println("2.Categoria de entrenamiento: ");
+            System.out.println("Elija una opción: ");
+            String opc = sc.nextLine();
+            switch(opc){
+                case "1" -> {
+                    System.out.println("Ingrese el tipo de entrenamiento: ");
+                    String entrenamiento = sc.nextLine();
+                    entrenamientos.get(index).setEntrenamiento(entrenamiento);
+                }
+                case "2" -> {
+                    System.out.println("Ingrese la categoria: ");
+                    Categoria categoriaValidada = Categoria.valueOf(sc.nextLine().toUpperCase());
+                    entrenamientos.get(index).setCategoriaEntrenamiento(categoriaValidada);
+                }
+                default -> {
+                    System.out.println("Elija bien");
+                }
+            }
+            GuardarEnArchivo.actualizarEntrenamientos(entrenamientos);
+        }
+    }
+
+
+    public static int buscarEntrenamiento(String texto, ArrayList<Entrenamiento> entrenamientos) {
+        int index = -1;
+        int counter = 0;
+
+        while(counter < entrenamientos.size() && index == -1){
+
+            if(entrenamientos.get(counter).getCode().equalsIgnoreCase(texto)) {
+
+                index = counter;
+            }
+
+            counter++;
+
+        }
+        return index;
+    }
 }
+
+

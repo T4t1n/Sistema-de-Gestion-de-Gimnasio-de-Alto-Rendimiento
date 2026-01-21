@@ -66,3 +66,94 @@ Categoria: Profesional
 Entrenamiento: Ejercicio hit para bajar de peso
 Peso:64.0
 Porcentaje de grasa: 40
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: Juan
+Identificación: 702880337
+Edad: 45 años
+Estatura: 186 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: Juan
+Identificación: 702880337
+Edad: 45 años
+Estatura: 178 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: null
+Identificación: 702880337
+Edad: 41 años
+Estatura: 160 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio calistenico
+Peso:85.0
+Porcentaje de grasa: 40
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: Lopez Yigi
+Identificación: 702880337
+Edad: 32 años
+Estatura: 176 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: osman potra
+Identificación: 702880337
+Edad: 45 años
+Estatura: 186 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: HARRY MAGUIRE
+Identificación: 702880337
+Edad: 27 años
+Estatura: 189 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-17
+Nombre del atleta: null
+Identificación: 702880337
+Edad: 35 años
+Estatura: 189 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-19
+Nombre del atleta: null
+Identificación: 702880337
+Edad: 25 años
+Estatura: 156 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Bajar de peso
+
+Fecha de registro: 2026-01-19
+Nombre del atleta: PIERRECK ABUAMEYANG
+Identificación: 702880337
+Edad: 34 años
+Estatura: 181 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Bajar de peso
+
+Fecha de registro: 2026-01-20
+Nombre del atleta: CARLO ANCELLOTI
+Identificación: 702880337
+Edad: 54 años
+Estatura: 189 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico, Ejercicio calistenico
+Objetivo: Mejorar resistencia

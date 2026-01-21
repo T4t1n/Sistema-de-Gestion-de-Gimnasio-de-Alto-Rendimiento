@@ -22,8 +22,31 @@ public class Entrenamiento {
         
     }
 
+    public Entrenamiento(String code, String tipoEntrenamiento, Categoria categoria){
+        this.code = code;
+        this.entrenamiento = tipoEntrenamiento;
+        this.categoriaEntrenamiento = categoria;
+    }
+
+
     public String getCode() {
         return code;
+    }
+
+    public String getEntrenamiento(){
+        return this.entrenamiento;
+    }
+
+    public void setEntrenamiento(String entrenamiento) {
+        this.entrenamiento = entrenamiento;
+    }
+
+    public Categoria getCategoriaEntrenamiento() {
+        return this.categoriaEntrenamiento;
+    }
+
+    public void setCategoriaEntrenamiento(Categoria categoria) {
+        this.categoriaEntrenamiento = categoria;
     }
 
     @Override
@@ -31,6 +54,11 @@ public class Entrenamiento {
         return '\n' + "Codigo: " + code + '\n' + 
                 "Entrenamiento: " + entrenamiento + '\n' + 
                 "Categoria: " + categoriaEntrenamiento.getTipo() + '\n';
+    }
+
+    //Esto es para probar una forma de guardar. //Realizado el 7 de enero del 2026
+    public String writeTXT(){
+        return getCode() + "," + entrenamiento + "," + categoriaEntrenamiento.getTipo();
     }
 
     

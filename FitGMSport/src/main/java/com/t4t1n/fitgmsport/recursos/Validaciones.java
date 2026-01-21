@@ -1,8 +1,10 @@
 
 package com.t4t1n.fitgmsport.recursos;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 /**
@@ -16,7 +18,7 @@ public abstract class Validaciones {
         
         switch(tipoDeValidacion){
             //case 1:  return valor.matches("^(?=.{4,20}$)([A-Z][a-z]+)(\\s[A-Z][a-z]+)*$");
-            case 1:  return valor.matches("^(?=.{4,30}$)([A-ZÀ-Ü][a-zà-ÿçñ]+)(\\s[A-ZÀ-Ü][a-zà-ÿçñ]+)*$");
+            case 1:  return valor.matches("^(?=.{4,30}$)([a-zà-ÿçñ]+)(\\s[a-zà-ÿçñ]+)*$");
             case 2: return valor.matches("^(?=.{9}$)(\\d)*$");
             default: return false;
                 
@@ -54,12 +56,38 @@ public abstract class Validaciones {
         
         
     }
-    static void validate(String im, String categoriaEntrenamiento)throws CustomException {
-           if(!"Categoria: Recreativo".equals(im) && categoriaEntrenamiento.equals("Recreativo")){
-                throw new CustomException("Number must be greater than zero.");
-            } 
+
+    public static void validarEntrenamiento(String en, String cate) {
+        Path ruta = Paths.get("Entrenamientos.txt");
+        int counter = 0;
+        String im = "";
+
+        try {
+
+            List<String> lines = Files.readAllLines(ruta);
+            for(String line : lines) {
+                if (line.contains(en)) {
+                    String[] parts = line.split(",");
+                    im = parts[2].trim();
+
+                }
+            }
+            System.out.println(im);
+            validate(im, cate);
+        }catch(IOException e){
+            e.printStackTrace();
+        }catch(Exception e) {
+            System.out.println(e.getMessage());
+            System.exit(0);
         }
-    
-    
-    
+    }
+    static void validate(String im, String categoriaJugador)throws CustomException {
+          /* if(!"Recreativo".equals(im) && categoriaJugador.equals("Recreativo")){
+                throw new CustomException("Number must be greater than zero. esto remal");
+            }  i dont know what i will want do it with this!*/
+
+        if(!im.equalsIgnoreCase(categoriaJugador)) {
+            throw new CustomException("Number must be greater than zero. esto remal");
+        }
+        }
 }

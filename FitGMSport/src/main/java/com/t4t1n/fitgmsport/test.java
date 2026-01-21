@@ -1,15 +1,17 @@
 
 package com.t4t1n.fitgmsport;
 import com.t4t1n.fitgmsport.modulos.Atleta;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import com.t4t1n.fitgmsport.modulos.Entrenamiento;
+
+import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+
+//import static com.t4t1n.fitgmsport.principal.Principal.cargarEntrenamientos;
+import static java.lang.String.valueOf;
 
 
 /**
@@ -17,21 +19,17 @@ import java.util.Scanner;
  * @author Jaimisky
  */
 public class test {
+
+     static private final String FILENAME = "Entrenamientos.txt";
+     static private FileReader fileReaderDDBB = null;
+     static private BufferedReader bufferedReaderDDBB = null;
+
     
-    public static void main(String[] args) throws Exception {
-        
-        Scanner sc = new Scanner(System.in);
-        List <Atleta> at1 = new ArrayList<>();
-        File file = new File("Atletas.txt");
-        ObjectInputStream ois = null;
-        
-        if(file.isFile()) {
-            ois = new ObjectInputStream(new FileInputStream(file));
-            at1 = (ArrayList<Atleta>)ois.readObject();
-            ois.close();
-        }
-        
-        System.out.println(at1);
+    public static void main(String[] args) throws IOException {
+
+
         
     }
+
+
 }
