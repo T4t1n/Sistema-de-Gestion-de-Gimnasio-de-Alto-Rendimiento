@@ -34,6 +34,8 @@ public class Competitivo extends Atleta {
     public String toString(){
         return  super.toString() + '\n'+ "Peso:" + peso + '\n' + "Porcentaje de Grasa: " + porcentajeDeGrasa + "\n";
     }
-    
+
+    @Override
+    public String writeTXT(){ return super.writeTXT() + "," + peso + "," + porcentajeDeGrasa;}
     
 }

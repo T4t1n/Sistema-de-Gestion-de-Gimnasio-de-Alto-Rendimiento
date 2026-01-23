@@ -1,6 +1,7 @@
 
 package com.t4t1n.fitgmsport.recursos;
 
+import com.t4t1n.fitgmsport.modulos.Atleta;
 import com.t4t1n.fitgmsport.modulos.Entrenamiento;
 
 import java.io.*;
@@ -22,6 +23,7 @@ public class GuardarEnArchivo {
     static private FileReader fileReaderDDBB = null;
     static private BufferedReader bufferedReaderDDBB = null;
     static private final String FILE = "Entrenamientos.txt";
+    static private final String FILEATLETH = "Atletasv1.txt";
     
   /*  //*** Metodo estatico que guarda los entrenamientos en archivo Entrenamientos.txt ***
     //** Utilizando la libreria de file y file writer
@@ -47,6 +49,18 @@ public class GuardarEnArchivo {
         System.out.println("Se realizo exitosamente el registro del atleta");
         }
     }
+
+    public static void añadirAtletas(List<Atleta> atletas) {
+        try(FileWriter fileWriterDDBB = new FileWriter(FILEATLETH, true)) {
+            for(int i= 0; i < atletas.size(); i++){
+                fileWriterDDBB.write(atletas.get(i).writeTXT() + "\n");
+            }
+        }catch (IOException e) {
+            System.out.println("No hay archivo");
+        }
+    }
+
+
 
     //This method is the actual to save entrenamientos created.
     public static void anadirEntrenamientos(List<Entrenamiento> entrenamientos) {
@@ -104,6 +118,9 @@ public class GuardarEnArchivo {
             System.out.println("No hay archivo.");
         }
     }
+
+
+
 
 
 }

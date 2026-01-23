@@ -112,6 +112,11 @@ public class Atleta {
     }
 
 
+    public String writeTXT(){
+        return fechaRegistro + "," + nombreAtleta + "," + identificacion + "," + edad + "," + estatura + "," + categoria.getTipo() + "," + getEntrenamiento();
+    }
+
+
    
     
     

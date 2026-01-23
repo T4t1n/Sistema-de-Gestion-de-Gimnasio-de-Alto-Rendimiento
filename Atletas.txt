@@ -157,3 +157,22 @@ Estatura: 189 cm
 Categoria: Recreativo
 Entrenamiento: Ejercicio calistenico, Ejercicio calistenico
 Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-20
+Nombre del atleta: SERGIO RAMOS
+Identificación: 702880337
+Edad: 40 años
+Estatura: 183 cm
+Categoria: Recreativo
+Entrenamiento: Ejercicio calistenico
+Objetivo: Mejorar resistencia
+
+Fecha de registro: 2026-01-20
+Nombre del atleta: THIAGO SILVA
+Identificación: 702880337
+Edad: 41 años
+Estatura: 183 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de pases y recepciones
+Peso:78.0
+Porcentaje de grasa: 45
