@@ -69,6 +69,7 @@ public class Principal {
             System.out.println("Ingrese el tipo de entrenamiento: ");
             String entrenamientoParaJugador = sc.nextLine();
             Validaciones.validarEntrenamiento(entrenamientoParaJugador, categoria);
+            Validaciones.validarEntrenamientoNoSeaRepetido(entrenamientoParaJugador, entrenamiento);
             entrenamiento.add(entrenamientoParaJugador);
             System.out.println("Deseas seguir:");
             seguir = sc.nextLine();

@@ -53,8 +53,6 @@ public abstract class Validaciones {
             System.exit(0);
             
         }
-        
-        
     }
 
     public static void validarEntrenamiento(String en, String cate) {
@@ -69,7 +67,6 @@ public abstract class Validaciones {
                 if (line.contains(en)) {
                     String[] parts = line.split(",");
                     im = parts[2].trim();
-
                 }
             }
             System.out.println(im);
@@ -89,5 +86,14 @@ public abstract class Validaciones {
         if(!im.equalsIgnoreCase(categoriaJugador)) {
             throw new CustomException("Number must be greater than zero. esto remal");
         }
+    }
+
+    public static void validarEntrenamientoNoSeaRepetido(String en, List<String> entrenamientos) {
+        for(int i = 0; i < entrenamientos.size(); i++) {
+            if(en.equals(entrenamientos.get(i))){
+                System.out.println("Error repetido!");
+                System.exit(0);
+            }
         }
+    }
 }

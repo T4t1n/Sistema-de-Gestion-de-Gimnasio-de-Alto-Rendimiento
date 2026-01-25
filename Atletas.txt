@@ -246,3 +246,23 @@ Categoria: Profesional
 Entrenamiento: Ejercicio de pases y recepcion Ejercicio de pases y recepcion 
 Peso:56.0
 Porcentaje de grasa: 39
+
+Fecha de registro: 2026-01-24
+Nombre del atleta: JAIMISKY CELLEZ
+Identificación: 702880337
+Edad: 34 años
+Estatura: 176 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de pases y recepcion Ejercicio de pases y recepcion 
+Peso:78.0
+Porcentaje de grasa: 45
+
+Fecha de registro: 2026-01-24
+Nombre del atleta: null
+Identificación: 702880337
+Edad: 45 años
+Estatura: 178 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de pases y recepcion Ejercicio de pases y recepcion 
+Peso:45.0
+Porcentaje de grasa: 45

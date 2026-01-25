@@ -121,8 +121,5 @@ public class Atleta {
         return fechaRegistro + "," + nombreAtleta + "," + identificacion + "," + edad + "," + estatura + "," + categoria.getTipo() + "," + getEntrenamiento();
     }
 
-
-   
-    
     
 }
