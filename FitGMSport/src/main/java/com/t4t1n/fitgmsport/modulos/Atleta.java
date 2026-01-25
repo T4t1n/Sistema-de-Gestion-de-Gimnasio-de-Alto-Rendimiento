@@ -92,8 +92,13 @@ public class Atleta {
     }
 
 
-    public List<String> getEntrenamiento() {
-        return entrenamiento;
+    public String getEntrenamiento() {
+        String texto = "";
+        for(int i = 0; i < entrenamiento.size(); i++){
+            texto += entrenamiento.get(i);
+            texto += " ";
+        }
+        return texto;
     }
 
     public void setEntrenamiento(List<String> entrenamiento) {

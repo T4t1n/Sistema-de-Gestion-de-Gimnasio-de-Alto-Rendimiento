@@ -118,7 +118,10 @@ public class Principal {
            atletaTxt.add(atleta.toString());
            atletaTexto = atletaTxt.getLast();
            GuardarEnArchivo.atletas(atletaTexto);
-        
+
+
+
+            GuardarEnArchivo.añadirAtletas(new ArrayList<Atleta>(atleta));
         }catch(IllegalArgumentException e) {
             System.out.println("Error: valor de categoria o tipo de entrenamiento no valido.");
         }

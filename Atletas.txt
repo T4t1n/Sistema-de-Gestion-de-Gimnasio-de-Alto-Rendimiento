@@ -176,3 +176,73 @@ Categoria: Profesional
 Entrenamiento: Ejercicio de pases y recepciones
 Peso:78.0
 Porcentaje de grasa: 45
+
+Fecha de registro: 2026-01-24
+Nombre del atleta: BUKAYO SAKA
+Identificación: 702880337
+Edad: 24 años
+Estatura: 178 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de pases y recepciones
+Peso:72.0
+Porcentaje de grasa: 40
+
+Fecha de registro: 2026-01-24
+Nombre del atleta: EBERECHI EZE
+Identificación: 702880337
+Edad: 27 años
+Estatura: 178 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de pases y recepciones
+Peso:73.0
+Porcentaje de grasa: 37
+
+Fecha de registro: 2026-01-24
+Nombre del atleta: MARTIN ODEGAARD
+Identificación: 702880337
+Edad: 27 años
+Estatura: 178 cm
+Categoria: Profesional
+Entrenamiento: java.util.ArrayList$ListItr@5f4da5c3
+Peso:68.0
+Porcentaje de grasa: 40
+
+Fecha de registro: 2026-01-24
+Nombre del atleta: WILLIAM SALIBA
+Identificación: 702880337
+Edad: 24 años
+Estatura: 193 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de pases y recepcion
+Peso:92.0
+Porcentaje de grasa: 37
+
+Fecha de registro: 2026-01-24
+Nombre del atleta: NONI MADUEKE
+Identificación: 702880337
+Edad: 23 años
+Estatura: 182 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de pases y recepcion
+Peso:76.0
+Porcentaje de grasa: 36
+
+Fecha de registro: 2026-01-24
+Nombre del atleta: JORDI ALBA
+Identificación: 702880337
+Edad: 38 años
+Estatura: 170 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de pases y recepcionEjercicio de pases y recepcion
+Peso:37.0
+Porcentaje de grasa: 38
+
+Fecha de registro: 2026-01-24
+Nombre del atleta: YAYA TROURE
+Identificación: 702880337
+Edad: 57 años
+Estatura: 180 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de pases y recepcion Ejercicio de pases y recepcion 
+Peso:56.0
+Porcentaje de grasa: 39

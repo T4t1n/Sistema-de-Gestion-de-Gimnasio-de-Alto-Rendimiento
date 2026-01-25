@@ -37,5 +37,4 @@ public class Competitivo extends Atleta {
 
     @Override
     public String writeTXT(){ return super.writeTXT() + "," + peso + "," + porcentajeDeGrasa;}
-    
 }
