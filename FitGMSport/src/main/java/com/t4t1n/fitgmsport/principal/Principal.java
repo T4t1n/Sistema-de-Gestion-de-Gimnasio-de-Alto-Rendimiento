@@ -1,6 +1,7 @@
 
 package com.t4t1n.fitgmsport.principal;
 
+import com.t4t1n.fitgmsport.FitGMSport;
 import com.t4t1n.fitgmsport.modulos.Atleta;
 import com.t4t1n.fitgmsport.modulos.Competitivo;
 import com.t4t1n.fitgmsport.modulos.Entrenamiento;
@@ -16,6 +17,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
+
+import static com.t4t1n.fitgmsport.FitGMSport.main;
 
 
 /**
@@ -251,6 +254,35 @@ public class Principal {
         }
         return index;
     }
+
+
+    /*####### HERE STARTS THE CODE FOR THE SYSTEM REPORTS ########*/
+    public static void menuReportes(String opcion) {
+
+        switch(opcion) {
+            case "1" -> {
+                System.out.println("Jaimisky estuvo aqui");
+
+            }
+            case "2" -> {
+                System.out.println("Saliendo del sistema...");
+                FitGMSport menu = new FitGMSport();
+
+
+            }
+
+
+        }
+    }
+
 }
+
+
+
+
+
+
+
+
 
 

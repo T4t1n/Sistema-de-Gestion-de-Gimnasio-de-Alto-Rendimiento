@@ -12,6 +12,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import static com.t4t1n.fitgmsport.principal.Principal.menuReportes;
 
 
 /**
@@ -59,7 +60,12 @@ public class FitGMSport {
             case "5" -> {
                 System.out.println("Bienvenido/a! puede realizar busquedas y reportes segun lo deseado.");
                 System.out.println("1. Filtrar por nombre.");
-                
+                System.out.println("2. Filtrar por categoría (Recreativo, Competitivo, Profesional.");
+                System.out.println("3. Filtrar por rango de fechas (ejemplo: Atletas registrados entre mayo y junio");
+                System.out.println("4. Reporte grupal.");
+                System.out.println("5. Salir");
+                System.out.println("Elijan una opción: ");
+                menuReportes(sc.nextLine());
             }
             case "6" -> {System.out.println("Saliendo");}
             default -> {System.out.println("elija bien");}
