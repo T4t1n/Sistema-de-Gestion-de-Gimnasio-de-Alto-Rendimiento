@@ -266,3 +266,13 @@ Categoria: Profesional
 Entrenamiento: Ejercicio de pases y recepcion Ejercicio de pases y recepcion 
 Peso:45.0
 Porcentaje de grasa: 45
+
+Fecha de registro: 2026-01-28
+Nombre del atleta: FRANCISCO TRINCÃO
+Identificación: 702880337
+Edad: 26 años
+Estatura: 183 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de pases y recepciones 
+Peso:76.0
+Porcentaje de grasa: 45

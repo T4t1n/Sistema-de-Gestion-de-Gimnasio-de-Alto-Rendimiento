@@ -7,3 +7,4 @@
 2026-01-24,YAYA TROURE,702880337,57,180,Profesional,Ejercicio de pases y recepcion Ejercicio de pases y recepcion ,56.0,39
 2026-01-24,JAIMISKY CELLEZ,702880337,34,176,Profesional,Ejercicio de pases y recepcion Ejercicio de pases y recepcion ,78.0,45
 2026-01-24,null,702880337,45,178,Profesional,Ejercicio de pases y recepcion Ejercicio de pases y recepcion ,45.0,45
+2026-01-28,FRANCISCO TRINCÃO,702880337,26,183,Profesional,Ejercicio de pases y recepciones ,76.0,45

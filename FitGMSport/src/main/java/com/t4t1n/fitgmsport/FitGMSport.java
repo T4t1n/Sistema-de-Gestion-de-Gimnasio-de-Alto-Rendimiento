@@ -31,7 +31,8 @@ public class FitGMSport {
         System.out.println("2. Registrar entrenamiento/s");
         System.out.println("3. Eliminar entrenamiento/s");
         System.out.println("4. Modificar entrenamiento/s");
-        System.out.println("5. Salir.");
+        System.out.println("5. Reportes del sistema");
+        System.out.println("6. Salir.");
         
         System.out.println("Elija una opción:");
         String op = sc.nextLine();
@@ -55,7 +56,12 @@ public class FitGMSport {
                 System.out.println("Modificar entrenamiento:");
                 demo.modificarEntrenamiento(entrenamientos);
             }
-            case "5" -> {System.out.println("Saliendo");}
+            case "5" -> {
+                System.out.println("Bienvenido/a! puede realizar busquedas y reportes segun lo deseado.");
+                System.out.println("1. Filtrar por nombre.");
+                
+            }
+            case "6" -> {System.out.println("Saliendo");}
             default -> {System.out.println("elija bien");}
         }
     }   
