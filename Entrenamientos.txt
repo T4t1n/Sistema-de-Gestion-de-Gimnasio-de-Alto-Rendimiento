@@ -1,2 +1,4 @@
 GYM0744,Ejercicio calistenico,Recreativo
 GYM0925,Ejercicio de pases y recepciones,Profesional
+GYM0857,Ejercicio de dribling,Profesional
+GYM0404,Tiros a arco,Profesional

@@ -276,3 +276,43 @@ Categoria: Profesional
 Entrenamiento: Ejercicio de pases y recepciones 
 Peso:76.0
 Porcentaje de grasa: 45
+
+Fecha de registro: 2026-02-03
+Nombre del atleta: ISAGUI YOICHI
+Identificación: 702880337
+Edad: 18 años
+Estatura: 170 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de pases y recepciones 
+Peso:50.0
+Porcentaje de grasa: 36
+
+Fecha de registro: 2026-02-03
+Nombre del atleta: RIN ITOSHI
+Identificación: 702880337
+Edad: 17 años
+Estatura: 175 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de dribling Ejercicio de pases y recepciones 
+Peso:50.0
+Porcentaje de grasa: 37
+
+Fecha de registro: 2026-02-03
+Nombre del atleta: KUNIGAMI RENSUKE
+Identificación: 702880337
+Edad: 18 años
+Estatura: 179 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de dribling, Tiros a arco, Ejercicio de pases y recepciones, 
+Peso:39.0
+Porcentaje de grasa: 37
+
+Fecha de registro: 2026-02-03
+Nombre del atleta: KUNIGAMI RENSUKE
+Identificación: 702880337
+Edad: 19 años
+Estatura: 179 cm
+Categoria: Profesional
+Entrenamiento: Ejercicio de pases y recepciones. Tiros a arco. Ejercicio de dribling. 
+Peso:50.0
+Porcentaje de grasa: 39

@@ -62,6 +62,7 @@ public class GuardarEnArchivo {
 
 
 
+
     //This method is the actual to save entrenamientos created.
     public static void anadirEntrenamientos(List<Entrenamiento> entrenamientos) {
         try(FileWriter fileWriterDDBB = new FileWriter(FILE, true)) {
@@ -69,12 +70,29 @@ public class GuardarEnArchivo {
             for(int i=0; i<entrenamientos.size(); i++){
                 fileWriterDDBB.write(entrenamientos.get(i).writeTXT()+"\n");
             }
-
         } catch (IOException e) {
             System.out.println("No hay un archivo");
         }
     }
 
+    public static ArrayList<Atleta> obetnerTodoAtleta(){
+        ArrayList<Atleta> nuevosAtletas = new ArrayList<>();
+        try {
+            fileReaderDDBB = new FileReader(FILEATLETH);
+            bufferedReaderDDBB = new BufferedReader(fileReaderDDBB);
+            String line = "";
+            while((line = bufferedReaderDDBB.readLine()) != null) {
+                String[] parts = line.split(",");
+                String fecha = parts[0];
+                String nombre = parts[1];
+                String id = parts[2];
+            }
+
+        }catch(){
+
+        }
+
+    }
 
     public static ArrayList<Entrenamiento> obtenerTodoEntrenamiento() {
         ArrayList<Entrenamiento> nuevosEntrenamientos = new ArrayList<>();

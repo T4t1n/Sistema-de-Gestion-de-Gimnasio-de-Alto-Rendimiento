@@ -263,10 +263,10 @@ public class Principal {
             case "1" -> {
                 System.out.println("Jaimisky estuvo aqui");
 
+
             }
             case "2" -> {
                 System.out.println("Saliendo del sistema...");
-                FitGMSport menu = new FitGMSport();
 
 
             }

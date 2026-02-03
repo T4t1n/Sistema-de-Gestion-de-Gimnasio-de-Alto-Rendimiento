@@ -1,0 +1,13 @@
+2026-01-24,BUKAYO SAKA,702880337,24,178,Profesional,[Ejercicio de pases y recepciones],72.0,40
+2026-01-24,EBERECHI EZE,702880337,27,178,Profesional,[Ejercicio de pases y recepciones],73.0,37
+2026-01-24,MARTIN ODEGAARD,702880337,27,178,Profesional,java.util.ArrayList$ListItr@f2a0b8e,68.0,40
+2026-01-24,WILLIAM SALIBA,702880337,24,193,Profesional,[Ejercicio de pases y recepcion],92.0,37
+2026-01-24,NONI MADUEKE,702880337,23,182,Profesional,Ejercicio de pases y recepcion,76.0,36
+2026-01-24,JORDI ALBA,702880337,38,170,Profesional,Ejercicio de pases y recepcionEjercicio de pases y recepcion,37.0,38
+2026-01-24,YAYA TROURE,702880337,57,180,Profesional,Ejercicio de pases y recepcion Ejercicio de pases y recepcion ,56.0,39
+2026-01-24,JAIMISKY CELLEZ,702880337,34,176,Profesional,Ejercicio de pases y recepcion Ejercicio de pases y recepcion ,78.0,45
+2026-01-24,null,702880337,45,178,Profesional,Ejercicio de pases y recepcion Ejercicio de pases y recepcion ,45.0,45
+2026-01-28,FRANCISCO TRINCÃO,702880337,26,183,Profesional,Ejercicio de pases y recepciones ,76.0,45
+2026-02-03,ISAGUI YOICHI,702880337,18,170,Profesional,Ejercicio de pases y recepciones ,50.0,36
+2026-02-03,RIN ITOSHI,702880337,17,175,Profesional,Ejercicio de dribling Ejercicio de pases y recepciones ,50.0,37
+2026-02-03,KUNIGAMI RENSUKE,702880337,18,179,Profesional,Ejercicio de dribling, Tiros a arco, Ejercicio de pases y recepciones, ,39.0,37
