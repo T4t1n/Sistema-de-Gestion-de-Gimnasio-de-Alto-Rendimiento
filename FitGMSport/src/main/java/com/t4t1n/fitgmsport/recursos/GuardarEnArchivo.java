@@ -86,6 +86,10 @@ public class GuardarEnArchivo {
                 String fecha = parts[0];
                 String nombre = parts[1];
                 String id = parts[2];
+                int edad = Integer.parseInt(parts[3]);
+                int altura = Integer.parseInt(parts[4]);
+                Categoria categoriaAtleta = Categoria.valueOf(parts[5].toUpperCase());
+                String entrenamiento = parts[6];
             }
 
         }catch(){
