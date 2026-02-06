@@ -19,6 +19,7 @@ import java.io.IOException;
 import java.util.*;
 
 import static com.t4t1n.fitgmsport.FitGMSport.main;
+import static com.t4t1n.fitgmsport.recursos.GuardarEnArchivo.obtenerTodoAtleta;
 
 
 /**
@@ -262,6 +263,8 @@ public class Principal {
         switch(opcion) {
             case "1" -> {
                 System.out.println("Jaimisky estuvo aqui");
+                ArrayList<Atleta> atletas = obtenerTodoAtleta();
+                atletas.forEach(System.out::println);
 
 
             }

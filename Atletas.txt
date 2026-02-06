@@ -316,3 +316,12 @@ Categoria: Profesional
 Entrenamiento: Ejercicio de pases y recepciones. Tiros a arco. Ejercicio de dribling. 
 Peso:50.0
 Porcentaje de grasa: 39
+
+Fecha de registro: null
+Nombre del atleta: YULIAN LOKI
+Identificación: 702880337
+Edad: 18 años
+Estatura: 185 cm
+Categoria: Recreativo
+Entrenamientos: null
+Objetivo: Bajar de peso

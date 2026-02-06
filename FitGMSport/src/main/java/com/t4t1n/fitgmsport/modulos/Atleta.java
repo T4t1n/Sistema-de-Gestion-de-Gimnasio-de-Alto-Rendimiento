@@ -26,11 +26,12 @@ public class Atleta {
     private String entrenamientos;
     private List<String> entrenamiento = new ArrayList<>();
     
-    
+    String fecha;
     public Atleta() {
     }
 
-    public Atleta(String nombre, String identificacion, int edad, int estatura, Categoria categoria, String entrenamientos) {
+    public Atleta(String fecha , String nombre, String identificacion, int edad, int estatura, Categoria categoria, String entrenamientos) {
+        this.fecha = fecha;
         this.nombreAtleta = nombre;
         this.identificacion = identificacion;
         this.edad = edad;
@@ -114,7 +115,7 @@ public class Atleta {
         this.entrenamiento = entrenamiento;
     }
 
-    @Override
+   /* @Override
     public String toString() {
         return  '\n' + "Fecha de registro: " + fechaRegistro + '\n' +
                 "Nombre del atleta: " + nombreAtleta + '\n' +
@@ -123,7 +124,30 @@ public class Atleta {
                 "Estatura: " + estatura + " cm" + '\n' +
                 "Categoria: " + categoria.getTipo() + '\n' +
                 "Entrenamiento: " + getEntrenamiento();
+    }*/
+
+    @Override
+    public String toString() {
+        return  '\n' + "Fecha de registro: " + fecha + '\n' +
+                "Nombre del atleta: " + nombreAtleta + '\n' +
+                "Identificación: " + identificacion + '\n' +
+                "Edad: " + edad + " años" + '\n' +
+                "Estatura: " + estatura + " cm" + '\n' +
+                "Categoria: " + categoria.getTipo() + '\n' +
+                "Entrenamientos: " + entrenamientos;
     }
+
+
+        public String showAtleta() {
+            return  '\n' + "Fecha de registro: " + fechaRegistro + '\n' +
+                    "Nombre del atleta: " + nombreAtleta + '\n' +
+                    "Identificación: " + identificacion + '\n' +
+                    "Edad: " + edad + " años" + '\n' +
+                    "Estatura: " + estatura + " cm" + '\n' +
+                    "Categoria: " + categoria.getTipo() + '\n' +
+                    "Entrenamiento: " + getEntrenamiento();
+        }
+
 
 
     public String writeTXT(){

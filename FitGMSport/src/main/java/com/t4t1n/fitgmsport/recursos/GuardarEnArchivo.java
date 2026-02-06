@@ -75,7 +75,7 @@ public class GuardarEnArchivo {
         }
     }
 
-    public static ArrayList<Atleta> obetnerTodoAtleta(){
+    public static ArrayList<Atleta> obtenerTodoAtleta(){
         ArrayList<Atleta> nuevosAtletas = new ArrayList<>();
         try {
             fileReaderDDBB = new FileReader(FILEATLETH);
@@ -90,12 +90,20 @@ public class GuardarEnArchivo {
                 int altura = Integer.parseInt(parts[4]);
                 Categoria categoriaAtleta = Categoria.valueOf(parts[5].toUpperCase());
                 String entrenamiento = parts[6];
+                Atleta ath1 = new Atleta(fecha,nombre,id,edad,altura, categoriaAtleta, entrenamiento);
+                switch (categoriaAtleta) {
+                    case RECREATIVO -> {
+
+
+                    }
+                }
+                nuevosAtletas.add(ath1);
             }
-
-        }catch(){
-
+        }catch(Exception e){
+            System.out.println(e);
         }
 
+        return nuevosAtletas;
     }
 
     public static ArrayList<Entrenamiento> obtenerTodoEntrenamiento() {
